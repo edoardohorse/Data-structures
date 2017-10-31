@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/netwo/Documents/Asd/Data-structures/ListArray.h
+
+C:/Users/netwo/Documents/Asd/Data-structures/PrettyPrintList.h
+iostream
+-
+iomanip
+-
+ListArray.h
+C:/Users/netwo/Documents/Asd/Data-structures/ListArray.h
+
+C:/Users/netwo/Documents/Asd/Data-structures/main.cpp
+iostream
+-
+ListArray.h
+C:/Users/netwo/Documents/Asd/Data-structures/ListArray.h
+PrettyPrintList.h
+C:/Users/netwo/Documents/Asd/Data-structures/PrettyPrintList.h
+
