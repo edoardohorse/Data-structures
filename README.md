@@ -19,9 +19,9 @@ __Constructor with template__
     // first param is the type of single element
     // second one is the max length of the array (constant) 
 
-    ListArray* ls = new ListArray<TypeElement, MaxLength>;     
-    Ex: ListArray* ls = new ListArray<int, 10>;                 // object pointer
-    
+    ListArray<int, 10>* ls = new ListArray<TypeElement, MaxLength>;     
+    Ex: ListArray<int, 10>* ls = new ListArray<int, 10>;                 // object pointer
+        auto* ls = new ListArray<int, 10>;                               // with auto
     or
     
     ListArray<TypeElement, MaxLength> ls;            
