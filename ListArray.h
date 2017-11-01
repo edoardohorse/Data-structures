@@ -29,6 +29,7 @@ public:
 
 	void set(int p, TipoElem val){ list[p] = val;}
 
+
 	void insert(int p, TipoElem val){
 		int i;
 		for(i=lenght-1; i >= p;i--){
