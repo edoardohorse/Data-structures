@@ -13,7 +13,7 @@ index | value
 2|3                                  
 3|30    
 
-_Constructor with template_
+__Constructor with template__
 ```
 
     // first param is the type of single element
@@ -28,7 +28,7 @@ _Constructor with template_
                                     
                                             
 ```
-_Read and write_
+__Read and write__
 ```
     ls->get(position)                   // array[position] => element
     ls->get(2)                          // 3
@@ -45,7 +45,7 @@ _Read and write_
     
 ```
 
-_Insert and remove_
+__Insert and remove__
 ```
     ls->insert(position, elementToInsert)               
     ls->insert(1, 22)
@@ -69,14 +69,14 @@ _Insert and remove_
       ╚═   ═╝        
 ```
 
-_Empty and last_
+__Empty and last__
 ```
     ls->isEmpty()           // true if empty, otherwise false
     
     ls->isLast(position)    // check if a given position is the last one
 ```
 
-_First, next and previous_
+__First, next and previous__
 ```
     ls->first()             // return the first index
     
