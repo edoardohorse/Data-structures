@@ -4,7 +4,12 @@
 
 Use an array like list
 
-
+index | value                       
+----- | ------                       
+0|17                                 
+1|70                                 
+2|3                                  
+3|30    
 
 _Constructor with template_
 ```
@@ -20,12 +25,7 @@ _Constructor with template_
     
     ListArrya<int, 10> ls;                      // object
     
-       index | value                       
-       ----- | ------                       
-       0|17                                 
-       1|70                                 
-       2|3                                  
-       3|30                                 
+                                    
                                             
 ```
 _Read and write_
