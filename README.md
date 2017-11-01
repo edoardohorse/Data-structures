@@ -19,11 +19,13 @@ __Constructor with template__
     // first param is the type of single element
     // second one is the max length of the array (constant) 
 
-    ListArrya* ls = new ListArray<int, 10>;     // object pointer
+    ListArray* ls = new ListArray<TypeElement, MaxLength>;     
+    Ex: ListArray* ls = new ListArray<int, 10>;                 // object pointer
     
     or
     
-    ListArrya<int, 10> ls;                      // object
+    ListArray<TypeElement, MaxLength> ls;            
+    Ex: ListArray<int, 10> ls;                                  // object
     
                                     
                                             
@@ -31,10 +33,10 @@ __Constructor with template__
 __Read and write__
 ```
     ls->get(position)                   // array[position] => element
-    ls->get(2)                          // 3
+    Ex: ls->get(2)                          // 3
     
     ls->set(position, elementToSet)     // array[position] = elementToSet;
-    ls->set(1, 50)                      // array[1] = 50;
+    Ex: ls->set(1, 50)                      // array[1] = 50;
          ↓
       ╔═   ═╗       ╔═   ═╗
       ║  17 ║       ║  17 ║
@@ -48,7 +50,7 @@ __Read and write__
 __Insert and remove__
 ```
     ls->insert(position, elementToInsert)               
-    ls->insert(1, 22)
+    Ex: ls->insert(1, 22)
             ↓
       ╔═   ═╗       ╔═   ═╗
       ║  17 ║       ║  17 ║
@@ -59,7 +61,7 @@ __Insert and remove__
                     ╚═   ═╝
     
     ls->remove(position)
-    ls->remove(1)
+    Ex: ls->remove(1)
             ↓
       ╔═   ═╗       ╔═   ═╗
       ║  17 ║       ║  17 ║
