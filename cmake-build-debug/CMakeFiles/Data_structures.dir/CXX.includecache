@@ -8,6 +8,8 @@
 
 C:/Users/netwo/Documents/Asd/Data-structures/ListArray.h
 
+C:/Users/netwo/Documents/Asd/Data-structures/ListCursor.h
+
 C:/Users/netwo/Documents/Asd/Data-structures/PrettyPrintList.h
 iostream
 -
@@ -21,6 +23,8 @@ iostream
 -
 ListArray.h
 C:/Users/netwo/Documents/Asd/Data-structures/ListArray.h
+ListCursor.h
+C:/Users/netwo/Documents/Asd/Data-structures/ListCursor.h
 PrettyPrintList.h
 C:/Users/netwo/Documents/Asd/Data-structures/PrettyPrintList.h
 

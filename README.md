@@ -86,3 +86,19 @@ __First, next and previous__
     
     ls->previous(position)  // position-1
 ```
+
+__Usage__
+```
+	auto* ls = new ListArray<int, 10>;
+	ls->insert(0,17);
+	ls->insert(1,20);
+	ls->insert(2,3);
+	ls->insert(3,30);
+
+	ls->insert(1,70);
+	ls->remove(2);
+
+	PrintList::printListArray(*ls,4);       // need to import PrettyPrintList.h
+
+	delete ls;
+```

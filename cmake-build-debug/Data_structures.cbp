@@ -85,6 +85,9 @@
 		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/ListArray.h">
 			<Option target="Data_structures"/>
 		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/ListCursor.h">
+			<Option target="Data_structures"/>
+		</Unit>
 		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/PrettyPrintList.h">
 			<Option target="Data_structures"/>
 		</Unit>
