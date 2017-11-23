@@ -1,4 +1,3 @@
-#include <iostream>
 #include "ListArray.h"
 #include "ListCursor.h"
 #include "PrettyPrintList.h"
@@ -7,7 +6,8 @@
 
 
 int main() {
-/*
+/* 
+
 
 	int** a;
 	a = new int*[2];
@@ -22,15 +22,16 @@ int main() {
 
 
 
-//	TableCell<int> p = TableCell<int>(Thickness::Thick, 8, true);
-//	p.value = a[0][0];
-//	std::cout << p;
-//	p.value = a[0][1];
-//	std::cout << p;
-//	p.value = a[1][0];
-//	std::cout << p;
-//	p.value = a[1][1];
-//	std::cout << p;
+ 	TableCell<int> p = TableCell<int>(Thickness::Thick, 8, true);
+	p.value = a[0][0];
+	std::cout << p;
+	p.value = a[0][1];
+	std::cout << p;
+	p.value = a[1][0];
+	std::cout << p;
+	p.value = a[1][1];
+	std::cout << p; 
+
 
 
 	auto tbl = new Table<int>(2,2, Thickness::Thin);
@@ -48,12 +49,17 @@ int main() {
 */
 
 	auto ls = new ListCursor<char, 10>();
-	Position p = ls->first();
-	ls->insert(p,'3');
-	p = ls->next(p);
-	ls->set(p,'6');
-	p = ls->next(p);
-	ls->set(p,'9');
+	Position L = ls->first();
+	ls->insert(L,'6');
+	 ls->insert(L,'1');
+	 ls->insert(L,'8');
+	//	Position M = ls->first();
+	//	ls->insert(M,'5');	
+
+	// p = ls->next(p);
+	// ls->set(p,'6');
+	// p = ls->next(p);
+	// ls->set(p,'9');
 //	ls->insert(p,'6');
 //	p = ls->next(p);
 //	ls->insert(p,'9');
@@ -65,7 +71,7 @@ int main() {
 
 	delete ls;
 
-
+	std::cout << std::endl;
 //	getchar();
 	return 0;
 }

@@ -67,7 +67,7 @@ public:
 		std::cout << (char)205 << (char)187;                        // ═╗
 		std::cout << std::endl;
 
-		for(i= 0; i < MaxLength ; i++){
+		for(i= 1; i < MaxLength+1 ; i++){
 			std::cout << WIDTH(2) << i;
 			std::cout << (char)186;                                 // ║
 			std::cout << WIDTH(widthBuffer) << get(i) << " ";
@@ -100,25 +100,27 @@ private:
 	};
 
 	struct{
-		Node v[MaxLength];
+		Node v[MaxLength+1];
 		List free;
 	}space;
 
 	void init(){
 		space.free = 1;
-		for(int i=0;i < MaxLength-1;i++){
+		space.v[0].next = 0;
+		for(int i=1;i < MaxLength;i++){
 			space.v[i].value = '-';
 			space.v[i].next = i+1;
 		}
-		space.v[MaxLength-1].value = '-';
-		space.v[MaxLength-1].next = 0;
+		space.v[MaxLength].value = '-';
+		space.v[MaxLength].next = 0;
 	}
 
-	void move(Position& h, Position& k){
-		Position tmp = k;
-		k=h;
-		h=space.v[h].next;
-		space.v[k].next = tmp;
+	void move(Position& free, Position& toMove){
+		Position nextFree = space.v[free].next;
+		space.v[free].next = space.v[toMove].next;
+		space.v[toMove].next = free;
+		toMove = free;
+		free = nextFree;
 	}
 };
 
