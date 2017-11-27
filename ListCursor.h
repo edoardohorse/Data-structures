@@ -2,13 +2,13 @@
 
 #include <iostream>
 #include <iomanip>
-
+#define MAXLENGTH 10
 
 #define WIDTH(x) std::setw(x)
 
 typedef int Position;
 
-template <typename TypeElem, int MaxLength>
+template <typename TypeElem>
 class ListCursor{
 
 
@@ -36,13 +36,14 @@ public:
 
 	void insert(Position p, TypeElem e){
 		if(space.free == 0){
-			//throw "Errore";
+			throw "Errore";
 		}
 		else if(p==l){
 			move(space.free, l);
 			space.v[l].value = e;
 		}
 		else{
+
 			move(space.free,space.v[p].next);
 			space.v[space.v[p].next].value = e;
 		}
@@ -53,7 +54,7 @@ public:
 			move(l,space.free);
 		}
 		else{
-			move(space.v[p].next,l);
+			move(space.v[p].next,space.free);
 		}
 	}
 
@@ -67,7 +68,7 @@ public:
 		std::cout << (char)205 << (char)187;                        // ═╗
 		std::cout << std::endl;
 
-		for(i= 1; i < MaxLength+1 ; i++){
+		for(i= 1; i < MAXLENGTH+1 ; i++){
 			std::cout << WIDTH(2) << i;
 			std::cout << (char)186;                                 // ║
 			std::cout << WIDTH(widthBuffer) << get(i) << " ";
@@ -83,6 +84,8 @@ public:
 
 		std::cout << std::endl;
 		std::cout << "Libera: " << space.free;
+        std::cout << std::endl;
+        std::cout << std::endl;
 	}
 
 
@@ -100,27 +103,34 @@ private:
 	};
 
 	struct{
-		Node v[MaxLength+1];
+		Node v[MAXLENGTH+1];
 		List free;
 	}space;
 
 	void init(){
 		space.free = 1;
 		space.v[0].next = 0;
-		for(int i=1;i < MaxLength;i++){
+		for(int i=1;i < MAXLENGTH;i++){
 			space.v[i].value = '-';
 			space.v[i].next = i+1;
 		}
-		space.v[MaxLength].value = '-';
-		space.v[MaxLength].next = 0;
+		space.v[MAXLENGTH].value = '-';
+		space.v[MAXLENGTH].next = 0;
 	}
-
+public:
 	void move(Position& free, Position& toMove){
-		Position nextFree = space.v[free].next;
-		space.v[free].next = space.v[toMove].next;
-		space.v[toMove].next = free;
-		toMove = free;
-		free = nextFree;
+        Position nextFree = space.v[free].next;
+        space.v[free].next = space.v[toMove].next;
+        space.v[toMove].next = free;
+        toMove = free;
+        free = nextFree;
+
+/*
+        Position  tmp  = toMove;
+        toMove = free;
+        free = space.v[free].next;
+        space.v[toMove].next = tmp;
+*/
 	}
 };
 

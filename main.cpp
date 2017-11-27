@@ -1,7 +1,7 @@
 #include "ListArray.h"
 #include "ListCursor.h"
 #include "PrettyPrintList.h"
-
+#include <stdlib.h>
 
 
 
@@ -48,31 +48,42 @@ int main() {
 	delete(a);
 */
 
-	auto ls = new ListCursor<char, 10>();
-	Position L = ls->first();
-	ls->insert(L,'6');
-	 ls->insert(L,'1');
-	 ls->insert(L,'8');
-	//	Position M = ls->first();
-	//	ls->insert(M,'5');	
+	auto L = new ListCursor<char>();
+	auto M = new ListCursor<char>();
+	auto S = new ListCursor<char>();
 
-	// p = ls->next(p);
-	// ls->set(p,'6');
-	// p = ls->next(p);
-	// ls->set(p,'9');
-//	ls->insert(p,'6');
-//	p = ls->next(p);
-//	ls->insert(p,'9');
+    Position p = L->first();
+    L->insert(p,'a');
 
-//	p= ls->next(p);
-//	ls->insert(p,'6');
+    p = L->next(p);
+    L->insert(p,'b');
+    L->print();
 
-	ls->print();
+    p = L->next(p);
+    L->insert(p,'c');
+    L->print();
 
-	delete ls;
+    p = L->next(p);
+    L->insert(p,'d');
+    L->print();
+
+    p = L->next(p);
+    L->insert(p,'e');
+    L->print();
+
+    p = L->next(p);
+    L->insert(p,'f');
+    L->print();
+
+
+    L->remove(p);
+	std::cout << std::endl;
+    L->print();
+	delete L,S,M;
+
 
 	std::cout << std::endl;
-//	getchar();
+    system("pause");
 	return 0;
 }
 
