@@ -1,10 +1,10 @@
 #pragma once
 
 #include <iostream>
-#include <iomanip>
-#define MAXLENGTH 10
+#include <stdexcept>
+#define MAXLENGTH 1000
 
-#define DEBUG_ 1
+#define DEBUG_
 
 #define WIDTH(x) std::setw(x)
 
@@ -22,8 +22,6 @@ public:
 
 	~ListCursor(){}
 
-
-
 	bool isEmpty(){ return l == 0;	}
 
 	Position first()const{return space.v[0].next;}
@@ -36,31 +34,30 @@ public:
 
 	void set(Position p, TypeElem e){ space.v[p].value = e;}
 
-	void insert(Position p, TypeElem e){
+	void insert(Position& p, TypeElem e){
 		if(space.free == 0){
-			throw "Errore";
-		}
-		else if(p==l){              // Creando la lista piena (vero solo al primo elemento)
-			move(space.free, l);
-			space.v[l].value = e;
+			throw std::invalid_argument("Overflow of list dimension");
 		}
 		else{
-
 			move(space.free,space.v[p].next);
 			space.v[space.v[p].next].value = e;
 		}
 	}
 
-	void remove(Position p){
+	void remove(Position& p){
+        Position tmp = space.v[p].next;
 		space.v[previous(p)].next = space.v[p].next;
-#ifdef DEBUG_
-		space.v[p].value = (TypeElem) NULL;
-#endif
-		space.v[p].next = space.free;
-		space.free = p;
-	}
 
-	/*void print() {
+        #ifdef DEBUG_
+		    space.v[p].value = (TypeElem) NULL;
+        #endif
+
+        space.v[p].next = space.free;
+		space.free = p;
+        p = tmp;
+	}
+/*
+	void print() {
 		int widthBuffer = 3;
 		Position i;
 
@@ -89,9 +86,9 @@ public:
 		std::cout << "Libera: " << space.free;
 		std::cout << std::endl;
 		std::cout << std::endl;
-	}*/
-
-		Position previous(Position p){
+	}
+*/
+    Position previous(Position p){
 		Position tmp = first();
 		while(next(tmp) != p){
 			tmp = next(tmp);
@@ -118,32 +115,30 @@ private:
 	void init(){
 		space.free = 1;
 		space.v[0].next = 0;
-		space.v[0].value= '-';
+        #ifdef DEBUG_
+            space.v[0].value = (TypeElem) NULL;
+        #endif
 		for(int i=1;i < MAXLENGTH;i++){
-#ifdef DEBUG_
+        #ifdef DEBUG_
 			space.v[i].value = (TypeElem) NULL;
-#endif
+        #endif
 			space.v[i].next = i+1;
 		}
 
-#ifdef DEBUG_
-		space.v[MAXLENGTH].value = (TypeElem) NULL;
-#endif
+        #ifdef DEBUG_
+		    space.v[MAXLENGTH].value = (TypeElem) NULL;
+        #endif
+
 		space.v[MAXLENGTH].next = 0;
 	}
 
+public:
 	void move(Position& free, Position& toMove){
-        Position tmp = space.v[free].next;
-        space.v[free].next = space.v[toMove].next;
-        space.v[toMove].next = free;
-        toMove = free;
-        free = tmp;
-/*
         Position  tmp  = toMove;
         toMove = free;
         free = space.v[free].next;
         space.v[toMove].next = tmp;
-*/
+
 	}
 };
 

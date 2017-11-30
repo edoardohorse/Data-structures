@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/netwo/Documents/Asd/Data-structures/ListArray.h
+C:/Users/Edoardo/Documents/Asd/Data-structures/ListArray.h
 
-C:/Users/netwo/Documents/Asd/Data-structures/ListCursor.h
+C:/Users/Edoardo/Documents/Asd/Data-structures/ListCursor.h
 iostream
 -
-iomanip
+stdexcept
 -
 
-C:/Users/netwo/Documents/Asd/Data-structures/PrettyPrintList.h
+C:/Users/Edoardo/Documents/Asd/Data-structures/PrettyPrintList.h
 iostream
 -
 string
@@ -24,15 +24,15 @@ sstream
 iomanip
 -
 ListArray.h
-C:/Users/netwo/Documents/Asd/Data-structures/ListArray.h
+C:/Users/Edoardo/Documents/Asd/Data-structures/ListArray.h
 
-C:/Users/netwo/Documents/Asd/Data-structures/main.cpp
+C:/Users/Edoardo/Documents/Asd/Data-structures/main.cpp
 ListArray.h
-C:/Users/netwo/Documents/Asd/Data-structures/ListArray.h
+C:/Users/Edoardo/Documents/Asd/Data-structures/ListArray.h
 ListCursor.h
-C:/Users/netwo/Documents/Asd/Data-structures/ListCursor.h
+C:/Users/Edoardo/Documents/Asd/Data-structures/ListCursor.h
 PrettyPrintList.h
-C:/Users/netwo/Documents/Asd/Data-structures/PrettyPrintList.h
+C:/Users/Edoardo/Documents/Asd/Data-structures/PrettyPrintList.h
 cstdlib
 -
 

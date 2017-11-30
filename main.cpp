@@ -48,27 +48,39 @@ int main() {
 	delete(a);
 */
 
-	auto L = new ListCursor<int>();
+	auto L = new ListCursor<char>();
 	auto M = new ListCursor<char>();
 	auto S = new ListCursor<char>();
 
     Position p = L->first();
-    L->insert(p,6);
 
-	p = L->next(p);
-    L->insert(p,1);
+    L->insert(p,'a');
+    p = L->next(p);
+    L->insert(p,'b');
+    p = L->next(p);
+    L->insert(p,'c');
+    p = L->next(p);
+    L->insert(p,'d');
+    p = L->next(p);
+    L->insert(p,'e');
+    p = L->next(p);
+    L->insert(p,'f');
+    p = L->next(p);
+    L->insert(p,'g');
+    p = L->next(p);
+    L->insert(p,'h');
+    p = L->next(p);
+    L->insert(p,'i');
+    p = L->next(p);
+    L->insert(p,'l');
+    p = L->next(p);
+    L->insert(p,'m');
 
-	p = L->next(p);
-    L->insert(p,3);
-	PrintList::printListCursor(L);
 
-    L->remove(p);
-
-	L->insert(p,9);
-	std::cout << std::endl;
-
-	std::cout << std::endl;
     PrintList::printListCursor(L);
+
+
+
 	delete L,S,M;
 
 
