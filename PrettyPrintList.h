@@ -33,6 +33,7 @@ namespace PrintList{
 	template <typename TypeElem>
 	void printListCursor(const ListCursor<TypeElem>* list, int widthBuffer = 3) {
 		Position i=list->first();
+		bool finish = false;
 		int nZeroes = 0;
 
 		std::cout << "  ";
@@ -41,9 +42,29 @@ namespace PrintList{
 		std::cout << (char)205 << (char)187;                        // ═╗
 		std::cout << std::endl;
 
-		while(nZeroes != 2){
-			if(list->next(i)==0)
+		while(!finish){
+			const int SPARE_LINES = 7;
+			if(list->next(i)==0) {
 				nZeroes++;
+			}
+			(nZeroes>0)?nZeroes++: false;
+			if(nZeroes == SPARE_LINES){
+				finish = true;
+
+				int c=1;
+				while(c!=SPARE_LINES){
+					std::cout << WIDTH(2) << i;
+					std::cout << (char)186;                                 // ║
+					std::cout << WIDTH(widthBuffer) << " ";
+					std::cout << " . ";                        // |
+					std::cout << WIDTH(widthBuffer) << " ";
+					std::cout << (char)186;                                 // ║
+					std::cout << std::endl;
+					c++;
+					i++;
+				}
+				return;
+			}
 			std::cout << WIDTH(2) << i;
 			std::cout << (char)186;                                 // ║
 			std::cout << WIDTH(widthBuffer) << list->get(i) << " ";

@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <stdexcept>
-#define MAXLENGTH 1000
+#define MAXLENGTH 11
 
 #define DEBUG_
 
@@ -26,7 +26,7 @@ public:
 
 	Position first()const{return space.v[0].next;}
 
-	bool isLast(Position p) const{return p == 0;}
+	bool isLast(Position p) const{return space.v[p].next == 0;}
 
 	Position next(Position p) const{ return space.v[p].next;}
 
