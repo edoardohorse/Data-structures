@@ -12,21 +12,54 @@ namespace PrintList{
 
 	// Pretty print of list
 	template <typename TypeElem, int Length>
-	void printListArray(ListArray<TypeElem, Length> list, int widthBuffer = 3) {
+	void printListArray(const ListArray<TypeElem, Length>* list, int widthBuffer = 3){
 		int i;
 		std::cout << (char)201 << (char)205 << WIDTH(widthBuffer);  // ╔═
 		std::cout << (char)205 << (char)187;                        // ═╗
 		std::cout << std::endl;
 
-		for(i=0; !list.isLast(i-1) ;i++){
+		for(i=list->first(); !list->isLast(i-1) ;i++){
 			std::cout << (char)186;                                 // ║
-			std::cout << WIDTH(widthBuffer) << list.get(i) << " ";
+			std::cout << WIDTH(widthBuffer) << list->get(i) << " ";
 			std::cout << (char)186;                                 // ║
 			std::cout << std::endl;
 		}
 
 		std::cout << (char)200 << (char)205 << WIDTH(widthBuffer);  // ╚═
 		std::cout << (char)205 << (char)188;                        // ═╝
+	}
+
+	// Pretty print of list
+	template <typename TypeElem>
+	void printListCursor(const ListCursor<TypeElem>* list, int widthBuffer = 3) {
+		Position i=list->first();
+		int nZeroes = 0;
+
+		std::cout << "  ";
+		std::cout << (char)201 << (char)205 << WIDTH(widthBuffer);  // ╔═
+		std::cout << std::string(7, (char)205);
+		std::cout << (char)205 << (char)187;                        // ═╗
+		std::cout << std::endl;
+
+		while(nZeroes != 2){
+			if(list->next(i)==0)
+				nZeroes++;
+			std::cout << WIDTH(2) << i;
+			std::cout << (char)186;                                 // ║
+			std::cout << WIDTH(widthBuffer) << list->get(i) << " ";
+			std::cout << (char)124 ;                        // |
+			std::cout << WIDTH(widthBuffer) << list->next(i) << " ";
+			std::cout << (char)186;                                 // ║
+			std::cout << std::endl;
+
+			i++;
+		}
+		std::cout << "  ";
+		std::cout << (char)200 << (char)205 << WIDTH(widthBuffer);  // ╚═
+		std::cout << std::string(7, (char)205);
+		std::cout << (char)205 << (char)188;                        // ═╝
+
+		std::cout << std::endl;
 	}
 }
 

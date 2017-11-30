@@ -15,10 +15,10 @@ public:
 	bool isEmpty(){return length == 0;}
 
 	// check if a given position is the last one
-	bool isLast(Position pos){return length-1 == pos;}
+	bool isLast(Position pos) const{return length-1 == pos;}
 
 	// return first index
-	Position first(){return 0;}
+	Position first() const{return 0;}
 
 	// return the next position
 	Position next(Position pos){
@@ -37,7 +37,7 @@ public:
 	}
 
 	// return the value of a given position
-	TypeElem get(Position pos){ return list[pos];}
+	TypeElem get(Position pos) const{ return list[pos];}
 
 	// set a value to a given position
 	void set(Position pos, TypeElem val){ list[pos] = val;}
@@ -77,7 +77,7 @@ private:
 	ls->insert(1,70);
 	ls->remove(2);
 
-	PrintList::printListArray(*ls,4);
+	PrintList::printListArray(ls,4);
 	delete ls;
 
  * */

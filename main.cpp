@@ -1,7 +1,7 @@
 #include "ListArray.h"
 #include "ListCursor.h"
 #include "PrettyPrintList.h"
-#include <stdlib.h>
+#include <cstdlib>
 
 
 
@@ -48,37 +48,27 @@ int main() {
 	delete(a);
 */
 
-	auto L = new ListCursor<char>();
+	auto L = new ListCursor<int>();
 	auto M = new ListCursor<char>();
 	auto S = new ListCursor<char>();
 
     Position p = L->first();
-    L->insert(p,'a');
+    L->insert(p,6);
 
-    p = L->next(p);
-    L->insert(p,'b');
-    L->print();
+	p = L->next(p);
+    L->insert(p,1);
 
-    p = L->next(p);
-    L->insert(p,'c');
-    L->print();
-
-    p = L->next(p);
-    L->insert(p,'d');
-    L->print();
-
-    p = L->next(p);
-    L->insert(p,'e');
-    L->print();
-
-    p = L->next(p);
-    L->insert(p,'f');
-    L->print();
-
+	p = L->next(p);
+    L->insert(p,3);
+	PrintList::printListCursor(L);
 
     L->remove(p);
+
+	L->insert(p,9);
 	std::cout << std::endl;
-    L->print();
+
+	std::cout << std::endl;
+    PrintList::printListCursor(L);
 	delete L,S,M;
 
 
