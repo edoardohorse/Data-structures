@@ -1,9 +1,13 @@
 #pragma once
 
-template <typename TypeElem, int MaxLength>
+#define ARG TypeElem,MaxLength
+#define TEMPLATE template<typename TypeElem, int MaxLength>
+
+typedef int Position;
+
+TEMPLATE
 class ListArray{
 public:
-	typedef int Position;
 
 	ListArray();
 
@@ -14,7 +18,7 @@ public:
 	bool isLast(Position) const;
 
 	// Return first index
-	Position first() const{return 0;}
+	Position first() const;
 
 	// Return the next position
 	Position next(Position);
@@ -28,12 +32,11 @@ public:
 	// Set a value to a given position
 	void set(Position, TypeElem);
 
-	// Inject a value Posizioneo a given position of the array, all value after the injection are shifted
+	// Inject a value Position to a given position of the array, all value after the injection are shifted
 	void insert(Position, TypeElem);
 
 	// Pop a value from array, next values are translated up
 	void remove(Position);
-
 
 private:
 	TypeElem list[MaxLength];
@@ -54,3 +57,56 @@ private:
 	delete ls;
 
  * */
+
+
+TEMPLATE
+ListArray<ARG>::ListArray() { length = 0; }
+
+TEMPLATE
+bool ListArray<ARG>::isEmpty(){ return length == 0;}
+
+TEMPLATE
+bool ListArray<ARG>::isLast(Position pos) const{return length-1 == pos;}
+
+TEMPLATE
+Position ListArray<ARG>::first() const{return 0;}
+
+TEMPLATE
+Position ListArray<ARG>::next(Position pos){
+    if( pos < length-1){
+        return pos+1;
+    }
+    return length-1;
+}
+
+TEMPLATE
+Position ListArray<ARG>::previous(Position pos){
+    if(pos > 0){
+        return pos-1;
+    }
+    return 0;
+}
+
+TEMPLATE
+TypeElem ListArray<ARG>::get(Position pos) const{ return list[pos];}
+
+TEMPLATE
+void ListArray<ARG>::set(Position pos, TypeElem val){ list[pos] = val;}
+
+TEMPLATE
+void ListArray<ARG>::insert(Position pos, TypeElem val){
+    Position i;
+    for(i=length-1; i >= pos;i--){
+        list[i+1] = list[i];
+    }
+    list[pos] = val;
+    length++;
+}
+
+TEMPLATE
+void ListArray<ARG>::remove(Position pos){
+    for(Position i = pos; i < length-1; i++){
+        list[i] = list[i+1];
+    }
+    length--;
+}
