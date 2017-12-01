@@ -1,65 +1,38 @@
 #pragma once
 
-
-
 template <typename TypeElem, int MaxLength>
 class ListArray{
 public:
 	typedef int Position;
 
-	ListArray(){
-		length = 0;
-	}
+	ListArray();
 
-	// check if empty
-	bool isEmpty(){return length == 0;}
+	// Check if empty
+	bool isEmpty();
 
-	// check if a given position is the last one
-	bool isLast(Position pos) const{return length-1 == pos;}
+	// Check if a given position is the last one
+	bool isLast(Position) const;
 
-	// return first index
+	// Return first index
 	Position first() const{return 0;}
 
-	// return the next position
-	Position next(Position pos){
-		if( pos < length-1){
-			return pos+1;
-		}
-		return length-1;
-	}
+	// Return the next position
+	Position next(Position);
 
-	// return the previous position
-	Position previous(Position pos){
-		if(pos > 0){
-			return pos-1;
-		}
-		return 0;
-	}
+	// Return the previous position
+	Position previous(Position);
 
-	// return the value of a given position
-	TypeElem get(Position pos) const{ return list[pos];}
+	// Return the value of a given position
+	TypeElem get(Position) const;
 
-	// set a value to a given position
-	void set(Position pos, TypeElem val){ list[pos] = val;}
+	// Set a value to a given position
+	void set(Position, TypeElem);
 
-	// inject a value Posizioneo a given position of the array, all value after the injection are shifted
-	void insert(Position pos, TypeElem val){
-		Position i;
-		for(i=length-1; i >= pos;i--){
-			list[i+1] = list[i];
-		}
-		list[pos] = val;
-		length++;
-	}
+	// Inject a value Posizioneo a given position of the array, all value after the injection are shifted
+	void insert(Position, TypeElem);
 
-	// pop a value from array, next values are translated up
-	void remove(Position pos){
-		for(Position i = pos; i < length-1; i++){
-			list[i] = list[i+1];
-		}
-		length--;
-	}
-
+	// Pop a value from array, next values are translated up
+	void remove(Position);
 
 
 private:
