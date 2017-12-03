@@ -1,22 +1,41 @@
-#include <iostream>
 #include "ListArray.h"
+//#include "ListCursor.h"
 #include "PrettyPrintList.h"
+#include <cstdlib>
 
 
 
 int main() {
 
 
-	auto* ls = new ListArray<int, 10>;
-	ls->insert(0,17);
-	ls->insert(1,20);
-	ls->insert(2,3);
-	ls->insert(3,30);
+    auto ls = new NListCursor::ListCursor<char>();
+    NListCursor::Position p = ls->first();
 
-	ls->insert(1,70);
-	ls->remove(2);
+    ls->insert(p,'a');
+    p = ls->next(p);
+    ls->insert(p,'b');
+    p = ls->next(p);
+    ls->insert(p,'c');
+    p = ls->next(p);
+    ls->insert(p,'d');
+    p = ls->next(p);
 
-	PrintList::printListArray(*ls,4);
-	delete ls;
+
+    ls->remove(p);
+    PrintList::printListCursor(ls);
+
+
+
+    delete ls;
+
+
+
+    std::cout << std::endl;
+    system("pause");
 	return 0;
+
+
 }
+
+
+

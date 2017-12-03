@@ -1,54 +1,119 @@
 #pragma once
 
-template <typename TipoElem, int MaxLength>
-class ListArray{
-public:
-	ListArray(){
-		lenght = 0;
-	}
+namespace NListArray {
+	typedef int Position;
 
-	bool isEmpty(){return lenght == 0;}
 
-	bool isLast(int p){return lenght-1 == p;}
+	template<typename TypeElem, int MaxLength>
+	class ListArray {
 
-	int first(){return 0;}
 
-	int next(int p){
-		if( p+1 < MaxLength){
-			return p+1;
+	public:
+
+
+		ListArray();
+
+		// Check if empty
+		bool isEmpty();
+
+		// Check if a given position is the last one
+		bool isLast(Position) const;
+
+		// Return first index
+		Position first() const;
+
+		// Return the next position
+		Position next(Position);
+
+		// Return the previous position
+		Position previous(Position);
+
+		// Return the value of a given position
+		TypeElem get(Position) const;
+
+		// Set a value to a given position
+		void set(Position, TypeElem);
+
+		// Inject a value Position to a given position of the array, all value after the injection are shifted
+		void insert(Position, TypeElem);
+
+		// Pop a value from array, next values are translated up
+		void remove(Position);
+
+	private:
+
+
+		TypeElem list[MaxLength];
+		Position length;
+	};
+
+
+	template<typename TypeElem, int MaxLength>
+	ListArray<TypeElem, MaxLength>::ListArray() { length = 0; }
+
+	template<typename TypeElem, int MaxLength>
+	bool ListArray<TypeElem, MaxLength>::isEmpty() { return length == 0; }
+
+	template<typename TypeElem, int MaxLength>
+	bool ListArray<TypeElem, MaxLength>::isLast(Position pos) const { return length - 1 == pos; }
+
+	template<typename TypeElem, int MaxLength>
+	Position ListArray<TypeElem, MaxLength>::first() const { return 0; }
+
+	template<typename TypeElem, int MaxLength>
+	Position ListArray<TypeElem, MaxLength>::next(Position pos) {
+		if (pos < length - 1) {
+			return pos + 1;
 		}
+		return length - 1;
 	}
 
-	int previous(int p){
-		if(p-1 >= 0){
-			return p-1;
+	template<typename TypeElem, int MaxLength>
+	Position ListArray<TypeElem, MaxLength>::previous(Position pos) {
+		if (pos > 0) {
+			return pos - 1;
 		}
+		return 0;
 	}
 
-	TipoElem get(int p){ return list[p];}
+	template<typename TypeElem, int MaxLength>
+	TypeElem ListArray<TypeElem, MaxLength>::get(Position pos) const { return list[pos]; }
 
-	void set(int p, TipoElem val){ list[p] = val;}
+	template<typename TypeElem, int MaxLength>
+	void ListArray<TypeElem, MaxLength>::set(Position pos, TypeElem val) {
+		list[pos] = val;
+	}
 
-
-	void insert(int p, TipoElem val){
-		int i;
-		for(i=lenght-1; i >= p;i--){
-			list[i+1] = list[i];
+	template<typename TypeElem, int MaxLength>
+	void ListArray<TypeElem, MaxLength>::insert(Position pos, TypeElem val) {
+		Position i;
+		for (i = length - 1; i >= pos; i--) {
+			list[i + 1] = list[i];
 		}
-		list[p] = val;
-		lenght++;
+		list[pos] = val;
+		length++;
 	}
 
-	void remove(int p){
-		for(int i = p; i < lenght-1; i++){
-			list[i] = list[i+1];
+	template<typename TypeElem, int MaxLength>
+	void ListArray<TypeElem, MaxLength>::remove(Position pos) {
+		for (Position i = pos; i < length - 1; i++) {
+			list[i] = list[i + 1];
 		}
-		lenght--;
+		length--;
 	}
 
+/*
+ * 	auto* ls = new ListArray<int, 10>;
+	ls->insert(0,17);
+	ls->insert(1,20);
+	ls->insert(2,3);
+	ls->insert(3,30);
+	ls->insert(1,70);
+	ls->remove(2);
 
+	PrintList::printListArray(ls,4);
+	delete ls;
 
-private:
-	TipoElem list[MaxLength];
-	int lenght;
-};
+ * */
+
+}
