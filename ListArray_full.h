@@ -1,15 +1,10 @@
 #pragma once
 
-#define TEMPLATE_CLASS_LA template<typename TypeElem, int MaxLength>
-#define METHOD_CLASS_LA(type) TEMPLATE_CLASS_LA\
-					 type ListArray<TypeElem, MaxLength>::\
-
-
-TEMPLATE_CLASS_LA
+typedef int Position;
+template<typename TypeElem, int MaxLength>
 class ListArray{
 public:
 
-	typedef int Position;
 
 	ListArray();
 
@@ -102,7 +97,7 @@ void ListArray<TypeElem,MaxLength>::remove(Position pos){
 	}
 
 /*
-  	auto* ls = new ListArray<int, 10>;
+ * 	auto* ls = new ListArray<int, 10>;
 	ls->insert(0,17);
 	ls->insert(1,20);
 	ls->insert(2,3);

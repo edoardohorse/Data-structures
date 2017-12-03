@@ -4,7 +4,8 @@
 #include <sstream>
 #include <iomanip>
 
-#include "ListArray.h"
+#include "ListArray_full.h"
+#include "ListCursor.h"
 
 #define WIDTH(x) std::setw(x)
 
