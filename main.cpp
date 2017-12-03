@@ -1,4 +1,4 @@
-#include "ListArray_full.h"
+#include "ListArray.h"
 //#include "ListCursor.h"
 #include "PrettyPrintList.h"
 #include <cstdlib>
@@ -8,21 +8,24 @@
 int main() {
 
 
-    auto* ls = new ListArray<int, 10>;
-    ListArray::Position p = ls->first();
-    ls->insert(p,17); p = ls->next(p);
-    ls->insert(p,20); p = ls->next(p);
-    ls->insert(p,3); p = ls->next(p);
-    ls->insert(p,30);
+    auto ls = new NListCursor::ListCursor<char>();
+    NListCursor::Position p = ls->first();
 
-    p = ls->previous(p);
-    p = ls->previous(p);
-    ls->insert(p,70);
-
+    ls->insert(p,'a');
     p = ls->next(p);
-    ls->remove(p);
+    ls->insert(p,'b');
+    p = ls->next(p);
+    ls->insert(p,'c');
+    p = ls->next(p);
+    ls->insert(p,'d');
+    p = ls->next(p);
 
-    PrintList::printListArray(ls,4);
+
+    ls->remove(p);
+    PrintList::printListCursor(ls);
+
+
+
     delete ls;
 
 

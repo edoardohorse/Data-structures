@@ -4,7 +4,7 @@
 #include <sstream>
 #include <iomanip>
 
-#include "ListArray_full.h"
+#include "ListArray.h"
 #include "ListCursor.h"
 
 #define WIDTH(x) std::setw(x)
@@ -13,8 +13,8 @@ namespace PrintList{
 
 	// Pretty print of list
 	template <typename TypeElem, int Length>
-	void printListArray(const ListArray<TypeElem, Length>* list, int widthBuffer = 3){
-		int i;
+	void printListArray(const NListArray::ListArray<TypeElem, Length>* list, int widthBuffer = 3){
+		NListArray::Position i;
 		std::cout << (char)201 << (char)205 << WIDTH(widthBuffer);  // ╔═
 		std::cout << (char)205 << (char)187;                        // ═╗
 		std::cout << std::endl;
@@ -32,8 +32,8 @@ namespace PrintList{
 
 	// Pretty print of list
 	template <typename TypeElem>
-	void printListCursor(const ListCursor<TypeElem>* list, int widthBuffer = 3) {
-		Position i=list->first();
+	void printListCursor(const NListCursor::ListCursor<TypeElem>* list, int widthBuffer = 3) {
+		NListCursor::Position i=list->first();
 		int c=1;
 		int nZeroes = 0;
 
