@@ -14,17 +14,20 @@ namespace PrintList{
 	// Pretty print of list
 	template <typename TypeElem, int Length>
 	void printListArray(const NListArray::ListArray<TypeElem, Length>* list, int widthBuffer = 3){
-		NListArray::Position i;
+		NListArray::Position i=list->first();
+
+		std::cout << std::endl;
 		std::cout << (char)201 << (char)205 << WIDTH(widthBuffer);  // ╔═
 		std::cout << (char)205 << (char)187;                        // ═╗
 		std::cout << std::endl;
 
-		for(i=list->first(); !list->isLast(i-1) ;i++){
+		do{
 			std::cout << (char)186;                                 // ║
 			std::cout << WIDTH(widthBuffer) << list->get(i) << " ";
 			std::cout << (char)186;                                 // ║
 			std::cout << std::endl;
-		}
+
+		}while(!list->isLast(i++));
 
 		std::cout << (char)200 << (char)205 << WIDTH(widthBuffer);  // ╚═
 		std::cout << (char)205 << (char)188;                        // ═╝
@@ -37,7 +40,7 @@ namespace PrintList{
 		int c=1;
 		int nZeroes = 0;
 
-		std::cout << "  ";
+		std::cout << std::endl;
 		std::cout << (char)201 << (char)205 << WIDTH(widthBuffer);  // ╔═
 		std::cout << std::string(7, (char)205);
 		std::cout << (char)205 << (char)187;                        // ═╗
