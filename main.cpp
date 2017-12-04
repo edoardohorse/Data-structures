@@ -1,41 +1,33 @@
-#include "ListArray.h"
-//#include "ListCursor.h"
+
 #include "PrettyPrintList.h"
 #include <cstdlib>
+#include <stdio.h>
+#include "ListPointer.h"
+
+using namespace NListPointer;
+int main(){
+
+	ListPointer<std::string>* ls  = new ListPointer<std::string>;
+	Position<std::string> p = ls->first();
 
 
+	// first method insertion (LIFO)
+	ls->insert(p,"abecedario");
+	ls->insert(p,"aperitivo");
+	ls->insert(p,"bambola");
+	ls->insert(p,"barattolo");
+	ls->insert(p,"casale");
+	ls->insert(p,"castoro");
+	ls->insert(p,"luna");
+	ls->insert(p,"tornio");
+	ls->insert(p,"paese");
 
-int main() {
+	PrintList::printListPointer(ls);
 
-
-    auto ls = new NListCursor::ListCursor<char>();
-    NListCursor::Position p = ls->first();
-
-    ls->insert(p,'a');
-    p = ls->next(p);
-    ls->insert(p,'b');
-    p = ls->next(p);
-    ls->insert(p,'c');
-    p = ls->next(p);
-    ls->insert(p,'d');
-    p = ls->next(p);
-
-
-    ls->remove(p);
-    PrintList::printListCursor(ls);
-
-
-
-    delete ls;
-
-
-
-    std::cout << std::endl;
-    system("pause");
-	return 0;
-
-
+	system("pause");
+    return 0;
 }
+
 
 
 
