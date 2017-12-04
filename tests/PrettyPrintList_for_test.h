@@ -4,9 +4,9 @@
 #include <sstream>
 #include <iomanip>
 
-#include "ListArray.h"
-#include "ListCursor.h"
-#include "ListPointer.h"
+#include "ListArray_for_test.h"
+#include "ListCursor_for_test.h"
+#include "ListPointer_for_test.h"
 
 #define WIDTH(x) std::setw(x)
 
@@ -38,8 +38,7 @@ namespace PrintList{
 	template <typename TypeElem>
 	void printListCursor(const NListCursor::ListCursor<TypeElem>* list, int widthBuffer = 3) {
 		NListCursor::Position i=list->first();
-		int c=1;
-		int nZeroes = 0;
+
 
 		std::cout << std::endl;
 		std::cout << (char)201 << (char)205 << WIDTH(widthBuffer);  // ╔═
@@ -67,12 +66,11 @@ namespace PrintList{
 	}
 
 	template<typename TypeElem>
-	void printListPointer(const NListPointer::ListPointer<TypeElem>* list, int widthBuffer = 10){
+	void printListPointer(const NListPointer::ListPointer<TypeElem>* list, int widthBuffer = 8){
 		NListPointer::Position<TypeElem> i=list->first();
 
 
 		std::cout << std::endl;
-		std::cout << std::string("\0", widthBuffer);
 		std::cout << (char)201 << (char)205 << WIDTH(widthBuffer);  // ╔═
 		std::cout << std::string(7, (char)205);
 		std::cout << (char)205 << (char)187;                        // ═╗
@@ -87,9 +85,8 @@ namespace PrintList{
 			std::cout << (char)186;                                 // ║
 			std::cout << std::endl;
 
-			i = list->next(i);
-		}while(!list->isLast(i));
-		std::cout << std::string("\0", widthBuffer);
+
+		}while(!list->isLast(i++));
 		std::cout << "  ";
 		std::cout << (char)200 << (char)205 << WIDTH(widthBuffer);  // ╚═
 		std::cout << std::string(7, (char)205);
@@ -100,6 +97,7 @@ namespace PrintList{
 	}
 }
 
+/*
 
 enum class Thickness{
 	Thin,Thick,NoDefault
@@ -264,4 +262,4 @@ public:
 		return output;
 	}
 
-};
+};*/

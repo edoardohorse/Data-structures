@@ -1,8 +1,8 @@
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
 
-#include "../ListArray.h"
-#include "../PrettyPrintList.h"
+#include "ListArray_for_test.h"
+//#include "../PrettyPrintList.h"
 
 using testing::Eq;
 using namespace NListArray;
@@ -12,113 +12,113 @@ class ClassDeclaration: public testing::Test{
 public:
 
 
-	ListArray<int, 10>* obj = new ListArray<int, 10>;
-	ListArray<int, 10>* obj2 = new ListArray<int, 10>;
+	ListArray<int, 10>* ls = new ListArray<int, 10>;
+	ListArray<int, 10>* ls2 = new ListArray<int, 10>;
 	ClassDeclaration(){
 
 		// first method of insertion (LIFO)
-		Position p = obj->first();          // ╔═    ═╗
-		obj->insert(p,17);                  // ║   70 ║
-		obj->insert(p,20);                  // ║   30 ║
-		obj->insert(p,3);                   // ║    3 ║
-		obj->insert(p,30);                  // ║   20 ║
-		obj->insert(p,70);                  // ║   17 ║
+		Position p = ls->first();          // ╔═    ═╗
+		ls->insert(p,17);                  // ║   70 ║
+		ls->insert(p,20);                  // ║   30 ║
+		ls->insert(p,3);                   // ║    3 ║
+		ls->insert(p,30);                  // ║   20 ║
+		ls->insert(p,70);                  // ║   17 ║
 											// ╚═    ═╝
 
 
 		// second method of insertion (FIFO)        // ╔═    ═╗
-		p = obj2->first();obj2->insert(p,6);        // ║    6 ║
-		p = obj2->next(p);obj2->insert(p,99);       // ║   99 ║
-		p = obj2->next(p);obj2->insert(p,16874);    // ║16874 ║
-		p = obj2->next(p);obj2->insert(p,1);        // ║    1 ║
-		p = obj2->next(p);obj2->insert(p,468);      // ║  468 ║
+		p = ls2->first();ls2->insert(p,6);        // ║    6 ║
+		p = ls2->next(p);ls2->insert(p,99);       // ║   99 ║
+		p = ls2->next(p);ls2->insert(p,16874);    // ║16874 ║
+		p = ls2->next(p);ls2->insert(p,1);        // ║    1 ║
+		p = ls2->next(p);ls2->insert(p,468);      // ║  468 ║
 													// ╚═    ═╝
 
-//		PrintList::printListArray(obj,5);
+//		PrintList::printListArray(ls,5);
 //		std::cout << std::endl;
-//		PrintList::printListArray(obj2,5);
+//		PrintList::printListArray(ls2,5);
 
 	}
 
 	~ClassDeclaration(){
-		delete obj,obj2;
+		delete ls,ls2;
 	}
 };
 
 TEST_F(ClassDeclaration, Empty){
-	ASSERT_EQ(obj->isEmpty(), false );
+	ASSERT_EQ(ls->isEmpty(), false );
 }
 
 TEST_F(ClassDeclaration, First){
-	ASSERT_EQ(obj->first(),1);
-	ASSERT_EQ(obj2->first(),1);
+	ASSERT_EQ(ls->first(),1);
+	ASSERT_EQ(ls2->first(),1);
 }
 
 TEST_F(ClassDeclaration, Last){
-	Position p = obj->first();
-	ASSERT_FALSE(obj->isLast(p));
-	ASSERT_TRUE(obj->isLast(5));
+	Position p = ls->first();
+	ASSERT_FALSE(ls->isLast(p));
+	ASSERT_TRUE(ls->isLast(5));
 
 }
 
 TEST_F(ClassDeclaration, Next){
-	Position p = obj->first();
-	int tmp = obj->get(obj->next(p));
-	Position next = obj->next(p);
+	Position p = ls->first();
+	int tmp = ls->get(ls->next(p));
+	Position next = ls->next(p);
 
-	ASSERT_EQ(obj->next(p), next);
-	ASSERT_EQ(tmp, obj->get( next ));
+	ASSERT_EQ(ls->next(p), next);
+	ASSERT_EQ(tmp, ls->get( next ));
 }
 
 TEST_F(ClassDeclaration, Previous){
-	Position p = obj->first();
-	int tmp = obj->get(p);
-	Position next = obj->next(p);
+	Position p = ls->first();
+	int tmp = ls->get(p);
+	Position next = ls->next(p);
 
-	ASSERT_EQ(p, obj->previous(next));
-	ASSERT_EQ(tmp, obj->get( obj->previous(next) ));
+	ASSERT_EQ(p, ls->previous(next));
+	ASSERT_EQ(tmp, ls->get( ls->previous(next) ));
 }
 
 TEST_F(ClassDeclaration, Get){
-	Position p = obj->first();
+	Position p = ls->first();
 
-	ASSERT_EQ(obj->get(p),70);
-	p = obj->next(p);
+	ASSERT_EQ(ls->get(p),70);
+	p = ls->next(p);
 
-	ASSERT_EQ(obj->get(p),30);
-	p = obj->next(p);
+	ASSERT_EQ(ls->get(p),30);
+	p = ls->next(p);
 
-	ASSERT_EQ(obj->get(p),3);
-	p = obj->next(p);
+	ASSERT_EQ(ls->get(p),3);
+	p = ls->next(p);
 
-	ASSERT_EQ(obj->get(p),20);
-	p = obj->next(p);
+	ASSERT_EQ(ls->get(p),20);
+	p = ls->next(p);
 
-	ASSERT_EQ(obj->get(p),17);
-	p = obj->next(p);
+	ASSERT_EQ(ls->get(p),17);
+	p = ls->next(p);
 }
 TEST_F(ClassDeclaration, Get_2){
-	Position p = obj2->first();
-	ASSERT_EQ(obj2->get(p),6);
+	Position p = ls2->first();
+	ASSERT_EQ(ls2->get(p),6);
 
-	p = obj2->next(p);
-	ASSERT_EQ(obj2->get(p),99);
+	p = ls2->next(p);
+	ASSERT_EQ(ls2->get(p),99);
 
-	p = obj2->next(p);
-	ASSERT_EQ(obj2->get(p),16874);
+	p = ls2->next(p);
+	ASSERT_EQ(ls2->get(p),16874);
 
-	p = obj2->next(p);
-	ASSERT_EQ(obj2->get(p),1);
+	p = ls2->next(p);
+	ASSERT_EQ(ls2->get(p),1);
 
-	p = obj2->next(p);
-	ASSERT_EQ(obj2->get(p),468);
+	p = ls2->next(p);
+	ASSERT_EQ(ls2->get(p),468);
 
 
 }
 
 TEST_F(ClassDeclaration, Set){
 
-	auto cp = *obj;
+	auto cp = *ls;
 	Position p = cp.first();
 	cp.set(p,100);
 	ASSERT_EQ(cp.get(p),100);
@@ -142,7 +142,7 @@ TEST_F(ClassDeclaration, Set){
 }
 
 TEST_F(ClassDeclaration, Insert){
-	auto cp = *obj;
+	auto cp = *ls;
 
 	Position p = cp.first();
 	p = cp.next(p);
@@ -173,7 +173,7 @@ TEST_F(ClassDeclaration, Insert){
 }
 
 TEST_F(ClassDeclaration, Remove){
-	auto cp = *obj2;
+	auto cp = *ls2;
 
 	Position p = cp.first();
 	p = cp.next(p);
