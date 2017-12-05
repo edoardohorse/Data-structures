@@ -76,7 +76,7 @@ namespace NListPointer{
 
 	template <typename TypeElem>
 	bool ListPointer<TypeElem>::isLast(Position<TypeElem> p) const{
-		return p->next == nullptr;
+		return p == nullptr;
 	}
 
 	template <typename TypeElem>
