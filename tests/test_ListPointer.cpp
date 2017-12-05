@@ -70,19 +70,20 @@ TEST_F(ClassDeclaration, First){
 TEST_F(ClassDeclaration, Last){
 	//	LIFO
 	Position<char> p = ls2->first();
-	while(ls2->get(p) != 'g')
+	while(!ls2->isLast(p))
 		p = ls2->next(p);
 
 	ASSERT_TRUE(ls2->isLast(p));
-	ASSERT_EQ(ls2->get(p),'g');
+	ASSERT_TRUE(p == nullptr);
 
 	//	FIFO
 
 	Position<std::string> p2 = ls->first();
-	while(ls->get(p2) != "abecedario")
+	while(!ls->isLast(p2))
 		p2 = ls->next(p2);
 	ASSERT_TRUE(ls->isLast(p2));
-	ASSERT_EQ(ls->get(p2),"abecedario");
+	ASSERT_TRUE(p == nullptr);
+
 }
 
 TEST_F(ClassDeclaration, Next){
