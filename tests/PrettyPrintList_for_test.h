@@ -9,7 +9,7 @@
 #include "ListPointer_for_test.h"
 
 #define WIDTH(x) std::setw(x)
-
+ù
 namespace PrintList{
 
 	// Pretty print of list
