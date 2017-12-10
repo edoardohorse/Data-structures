@@ -2,55 +2,57 @@
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
 
-#include "ListPointer_for_test.h"
+
 #include "PrettyPrintList_for_test.h"
+#include "ListPointer_for_test.h"
 
 using testing::Eq;
 using namespace NListPointer;
+
 
 class ClassDeclaration: public testing::Test{
 public:
 
 	ListPointer<std::string>* ls  = new ListPointer<std::string>;
 	ListPointer<char>* ls2 = new ListPointer<char>;
-    ClassDeclaration(){
-	    Position<std::string> p = ls->first();
-	    Position<char> p2 = ls2->first();
+	ClassDeclaration(){
+		Position<std::string> p = ls->first();
+		Position<char> p2 = ls2->first();
 
-	    // first method insertion (LIFO)
-	    ls->insert(p,"abecedario");
-	    ls->insert(p,"aperitivo");
-	    ls->insert(p,"bambola");
-	    ls->insert(p,"barattolo");
-	    ls->insert(p,"casale");
-	    ls->insert(p,"castoro");
-	    ls->insert(p,"luna");
-	    ls->insert(p,"tornio");
-	    ls->insert(p,"paese");
+		// first method insertion (LIFO)
+		ls->insert(p,"abecedario");
+		ls->insert(p,"aperitivo");
+		ls->insert(p,"bambola");
+		ls->insert(p,"barattolo");
+		ls->insert(p,"casale");
+		ls->insert(p,"castoro");
+		ls->insert(p,"luna");
+		ls->insert(p,"tornio");
+		ls->insert(p,"paese");
 
 //		PrintList::printListPointer(ls);
 
 		// second method insertion (FIFO)
-	    p2 = ls2->first();
-	    ls2->insert(p2,'a');
-	    p2 = ls2->next(p2);
-	    ls2->insert(p2,'b');
-	    p2 = ls2->next(p2);
-	    ls2->insert(p2,'c');
-	    p2 = ls2->next(p2);
-	    ls2->insert(p2,'d');
-	    p2 = ls2->next(p2);
-	    ls2->insert(p2,'e');
-	    p2 = ls2->next(p2);
-	    ls2->insert(p2,'f');
-	    p2 = ls2->next(p2);
-	    ls2->insert(p2,'g');
+		p2 = ls2->first();
+		ls2->insert(p2,'a');
+		p2 = ls2->next(p2);
+		ls2->insert(p2,'b');
+		p2 = ls2->next(p2);
+		ls2->insert(p2,'c');
+		p2 = ls2->next(p2);
+		ls2->insert(p2,'d');
+		p2 = ls2->next(p2);
+		ls2->insert(p2,'e');
+		p2 = ls2->next(p2);
+		ls2->insert(p2,'f');
+		p2 = ls2->next(p2);
+		ls2->insert(p2,'g');
 
 //	    PrintList::printListPointer(ls2);
-    }
-    ~ClassDeclaration(){
-	    delete ls,ls2;
-    }
+	}
+	~ClassDeclaration(){
+		delete ls,ls2;
+	}
 };
 
 TEST_F(ClassDeclaration, Empty){
