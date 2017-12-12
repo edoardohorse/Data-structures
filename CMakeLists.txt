@@ -6,8 +6,8 @@ set(CMAKE_CXX_STANDARD 11)
 
 
 add_subdirectory(lib/googletest)
-include_directories(lib/googletest/googletest/include)
-include_directories(lib/googletest/googlemock/include)
+include_directories(lib/googletest/include)
+include_directories(lib/googlemock/include)
 
 
 set(SOURCE_FILES main.cpp PrettyPrintList.h ListArray.h ListCursor.h ListPointer.h)

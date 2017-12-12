@@ -67,8 +67,8 @@ namespace PrintList{
 	}
 
 	template<typename TypeElem>
-	void printListPointer(const NListPointer::ListPointer<TypeElem>* list, int widthBuffer = 10){
-		NListPointer::Position<TypeElem> i=list->first();
+	void printListPointer(const NListPointerTest::ListPointer<TypeElem>* list, int widthBuffer = 10){
+		NListPointerTest::Position<TypeElem> i=list->first();
 
 
 		std::string cornerLeftTop(1,(char)201);

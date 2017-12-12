@@ -3,10 +3,10 @@
 #include <gmock/gmock.h>
 
 
-#include "PrettyPrintList_for_test.h"
+//#include "PrettyPrintList_for_test.h"
 #include "ListPointer_for_test.h"
 
-#define NEW_LIST
+
 
 using testing::Eq;
 using namespace NListPointerTest;
@@ -162,7 +162,7 @@ TEST_F(ClassDeclaration, Remove){
 	ASSERT_EQ(tmp->get(tmp->previous(p)),"prova3");
     delete tmp;
 
-/*
+
 	// FIFO
 	ListPointer<char> tmp2 = *ls2;
 	Position<char> p2 = tmp2.first();
@@ -175,17 +175,16 @@ TEST_F(ClassDeclaration, Remove){
 	tmp2.remove(p2);                                  // Remove 'c'
 	ASSERT_EQ(tmp2.get(p2),'d');
 	ASSERT_EQ(tmp2.get(tmp2.previous(p2)),'b');
- */
+
 
 }
 
 TEST_F(ClassDeclaration, Previous){
 	// LIFO
-	ListPointer<std::string> tmp = *ls;
-    Position<std::string> p = tmp.first();
-	p = tmp.next(p);
-	p = tmp.next(p);
-	ASSERT_EQ(tmp.get(tmp.previous(p)), "tornio");
+	Position<std::string> p = ls->first();
+	p = ls->next(p);
+	p = ls->next(p);
+	ASSERT_EQ(ls->get(ls->previous(p)), "tornio");
 
 	// FIFO
     ListPointer<char> tmp2 = *ls2;
