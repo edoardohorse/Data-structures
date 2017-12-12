@@ -5,7 +5,7 @@
 //#include "../PrettyPrintList.h"
 
 using testing::Eq;
-using namespace NListArray;
+using namespace NListArrayTest;
 
 
 class ClassDeclaration: public testing::Test{

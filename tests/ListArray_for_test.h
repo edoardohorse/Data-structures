@@ -1,6 +1,6 @@
 #pragma once
 
-namespace NListArray {
+namespace NListArrayTest {
 	typedef int Position;
 
 

@@ -4,7 +4,7 @@
 #include "../ListCursor.h"
 
 using testing::Eq;
-using namespace NListCursor;
+using namespace NListCursorTest;
 
 class ClassDeclaration: public testing::Test{
 public:

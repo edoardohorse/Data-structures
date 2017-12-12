@@ -7,7 +7,7 @@
 //#define DEBUG_
 //#define WIDTH(x) std::setw(x)
 
-namespace NListCursor {
+namespace NListCursorTest {
 
 	typedef int Position;
 

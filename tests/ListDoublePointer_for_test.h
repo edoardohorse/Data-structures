@@ -1,6 +1,9 @@
 #pragma once
 
-namespace NListDoublePointer{
+
+
+
+namespace NListDoublePointerTest{
 
     template<typename TypeElem>
     class ListDoublePointer;
@@ -9,8 +12,8 @@ namespace NListDoublePointer{
     class Node{
     private:
         TypeElem value;
-        Node* next;
-        Node* previous;
+        Node* next = nullptr;
+        Node* previous = nullptr;
         friend class ListDoublePointer<TypeElem>;
     };
 
@@ -39,7 +42,7 @@ namespace NListDoublePointer{
 
         void set(Position<TypeElem>, TypeElem);
 
-        void insert(Position<TypeElem>, TypeElem);
+        void insert(Position<TypeElem>&, TypeElem);
 
         void remove(Position<TypeElem>);
 
@@ -52,7 +55,8 @@ namespace NListDoublePointer{
     template<typename TypeElem>
     ListDoublePointer<TypeElem>::ListDoublePointer() {
         ls = new Node<TypeElem>;
-        ls->next = ls->previous = nullptr;
+        ls->next = nullptr;
+        ls->previous = nullptr;
     }
 
     template<typename TypeElem>
@@ -102,19 +106,23 @@ namespace NListDoublePointer{
     }
 
     template<typename TypeElem>
-    void ListDoublePointer<TypeElem>::insert(Position<TypeElem> p, TypeElem e) {
+    void ListDoublePointer<TypeElem>::insert(Position<TypeElem>& p, TypeElem e) {
         Position<TypeElem> newNode = new Node<TypeElem>;
         newNode->value = e;
         newNode->next = p;
         if(ls->next == p){
             ls->next = newNode;
-            newNode->previous = nullptr;
         }
         else{
-            p->previous->next = newNode;
+            Position<TypeElem> prev = p->previous;
             newNode->previous = p->previous;
             p->previous = newNode;
         }
+
+        if(p!= nullptr){
+            p->previous = newNode;
+        }
+
         p = newNode;
     }
 
