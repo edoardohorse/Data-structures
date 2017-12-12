@@ -1,11 +1,11 @@
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
 
-#include "../ListArray.h"
-#include "../PrettyPrintList.h"
+#include "ListArray_for_test.h"
+#include "PrettyPrintList_for_test.h"
 
 using testing::Eq;
-using namespace NListArray;
+using namespace NListArrayTest;
 
 
 class ListArrayTest: public testing::Test{

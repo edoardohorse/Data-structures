@@ -1,6 +1,6 @@
 #pragma once
 
-namespace NListPointerTest {
+namespace NListPointer {
 
 
 	template<typename TypeElem>
