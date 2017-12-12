@@ -8,13 +8,13 @@ using testing::Eq;
 using namespace NListArray;
 
 
-class ClassDeclaration: public testing::Test{
+class ListArrayTest: public testing::Test{
 public:
 
 
 	ListArray<int, 10>* obj = new ListArray<int, 10>;
 	ListArray<int, 10>* obj2 = new ListArray<int, 10>;
-	ClassDeclaration(){
+	ListArrayTest(){
 
 		// first method of insertion (LIFO)
 		Position p = obj->first();          // ╔═    ═╗
@@ -40,28 +40,28 @@ public:
 
 	}
 
-	~ClassDeclaration(){
+	~ListArrayTest(){
 		delete obj,obj2;
 	}
 };
 
-TEST_F(ClassDeclaration, Empty){
+TEST_F(ListArrayTest, Empty){
 	ASSERT_EQ(obj->isEmpty(), false );
 }
 
-TEST_F(ClassDeclaration, First){
+TEST_F(ListArrayTest, First){
 	ASSERT_EQ(obj->first(),1);
 	ASSERT_EQ(obj2->first(),1);
 }
 
-TEST_F(ClassDeclaration, Last){
+TEST_F(ListArrayTest, Last){
 	Position p = obj->first();
 	ASSERT_FALSE(obj->isLast(p));
 	ASSERT_TRUE(obj->isLast(5));
 
 }
 
-TEST_F(ClassDeclaration, Next){
+TEST_F(ListArrayTest, Next){
 	Position p = obj->first();
 	int tmp = obj->get(obj->next(p));
 	Position next = obj->next(p);
@@ -70,7 +70,7 @@ TEST_F(ClassDeclaration, Next){
 	ASSERT_EQ(tmp, obj->get( next ));
 }
 
-TEST_F(ClassDeclaration, Previous){
+TEST_F(ListArrayTest, Previous){
 	Position p = obj->first();
 	int tmp = obj->get(p);
 	Position next = obj->next(p);
@@ -79,7 +79,7 @@ TEST_F(ClassDeclaration, Previous){
 	ASSERT_EQ(tmp, obj->get( obj->previous(next) ));
 }
 
-TEST_F(ClassDeclaration, Get){
+TEST_F(ListArrayTest, Get){
 	Position p = obj->first();
 
 	ASSERT_EQ(obj->get(p),70);
@@ -97,7 +97,7 @@ TEST_F(ClassDeclaration, Get){
 	ASSERT_EQ(obj->get(p),17);
 	p = obj->next(p);
 }
-TEST_F(ClassDeclaration, Get_2){
+TEST_F(ListArrayTest, Get_2){
 	Position p = obj2->first();
 	ASSERT_EQ(obj2->get(p),6);
 
@@ -116,7 +116,7 @@ TEST_F(ClassDeclaration, Get_2){
 
 }
 
-TEST_F(ClassDeclaration, Set){
+TEST_F(ListArrayTest, Set){
 
 	auto cp = *obj;
 	Position p = cp.first();
@@ -141,7 +141,7 @@ TEST_F(ClassDeclaration, Set){
 
 }
 
-TEST_F(ClassDeclaration, Insert){
+TEST_F(ListArrayTest, Insert){
 	auto cp = *obj;
 
 	Position p = cp.first();
@@ -172,7 +172,7 @@ TEST_F(ClassDeclaration, Insert){
 	ASSERT_EQ(cp.get(4),3);
 }
 
-TEST_F(ClassDeclaration, Remove){
+TEST_F(ListArrayTest, Remove){
 	auto cp = *obj2;
 
 	Position p = cp.first();
