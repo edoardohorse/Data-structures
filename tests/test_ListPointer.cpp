@@ -6,8 +6,10 @@
 #include "PrettyPrintList_for_test.h"
 #include "ListPointer_for_test.h"
 
+#define NEW_LIST
+
 using testing::Eq;
-using namespace NListPointer;
+using namespace NListPointerTest;
 
 
 class ClassDeclaration: public testing::Test{
@@ -55,6 +57,7 @@ public:
 	}
 };
 
+
 TEST_F(ClassDeclaration, Empty){
 	ListPointer<int>* tmp = new ListPointer<int>;
 	ASSERT_TRUE(tmp->isEmpty());
@@ -64,9 +67,9 @@ TEST_F(ClassDeclaration, Empty){
 }
 
 TEST_F(ClassDeclaration, First){
-//	ASSERT_EQ(ls2->first(), ls2->ls->next);
-
-//	ASSERT_EQ(ls->first(), ls2->ls->next);
+	ListPointer<int>* tmp = new ListPointer<int>;
+	ASSERT_EQ(tmp->first(), nullptr);
+	delete tmp;
 }
 
 TEST_F(ClassDeclaration, Last){
@@ -133,27 +136,33 @@ TEST_F(ClassDeclaration, Set){
 	ASSERT_EQ(ls->get(p),"paese");
 	ls->set(p, "popolo");
 	ASSERT_EQ(ls->get(p),"popolo");
+	ls->set(p, "paese");
 }
 
 TEST_F(ClassDeclaration, Insert){
 
 }
 
+
 TEST_F(ClassDeclaration, Remove){
 	// LIFO
-	ListPointer<std::string> tmp = *ls;
-	Position<std::string> p = tmp.first();
-	p = tmp.next(p);
-	p = tmp.next(p);
+	ListPointer<std::string>* tmp = new ListPointer<std::string>;
+	Position<std::string> p = tmp->first();
+    tmp->insert(p, "prova");
+    tmp->insert(p, "prova2");
+    tmp->insert(p, "prova3");
+    p = tmp->first();
+	p = tmp->next(p);
 
-	ASSERT_EQ(tmp.get(tmp.next(p)),"castoro");
-	ASSERT_EQ(tmp.get(tmp.previous(p)),"tornio");
+	ASSERT_EQ(tmp->get(tmp->next(p)),"prova");
+	ASSERT_EQ(tmp->get(tmp->previous(p)),"prova3");
 
-	tmp.remove(p);                                  // Remove "luna"
-	ASSERT_EQ(tmp.get(p),"castoro");
-	ASSERT_EQ(tmp.get(tmp.previous(p)),"tornio");
+	tmp->remove(p);                                  // Remove "luna"
+	ASSERT_EQ(tmp->get(p),"prova");
+	ASSERT_EQ(tmp->get(tmp->previous(p)),"prova3");
+    delete tmp;
 
-
+/*
 	// FIFO
 	ListPointer<char> tmp2 = *ls2;
 	Position<char> p2 = tmp2.first();
@@ -166,19 +175,23 @@ TEST_F(ClassDeclaration, Remove){
 	tmp2.remove(p2);                                  // Remove 'c'
 	ASSERT_EQ(tmp2.get(p2),'d');
 	ASSERT_EQ(tmp2.get(tmp2.previous(p2)),'b');
+ */
+
 }
 
 TEST_F(ClassDeclaration, Previous){
 	// LIFO
-	Position<std::string> p = ls->first();
-	p = ls->next(p);
-	p = ls->next(p);
-	ASSERT_EQ(ls->get(ls->previous(p)), "tornio");
+	ListPointer<std::string> tmp = *ls;
+    Position<std::string> p = tmp.first();
+	p = tmp.next(p);
+	p = tmp.next(p);
+	ASSERT_EQ(tmp.get(tmp.previous(p)), "tornio");
 
 	// FIFO
-	Position<char> p2 = ls2->first();
-	p2 = ls2->next(p2);
-	p2 = ls2->next(p2);
-	ASSERT_EQ(ls2->get(ls2->previous(p2)), 'b');
+    ListPointer<char> tmp2 = *ls2;
+    Position<char> p2 = tmp2.first();
+	p2 = tmp2.next(p2);
+	p2 = tmp2.next(p2);
+	ASSERT_EQ(tmp2.get(tmp2.previous(p2)), 'b');
 }
 
