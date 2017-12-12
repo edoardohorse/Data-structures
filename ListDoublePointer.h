@@ -120,9 +120,13 @@ namespace NListDoublePointer{
         }
         else{
             Position<TypeElem> tmp = first();
-            while (next(tmp) != p) {
-                tmp = next(tmp);
+            if(p == nullptr) {
+                while (next(tmp) != p) {
+                    tmp = next(tmp);
+                }
             }
+            else
+                tmp = p;
             newNode->setNext(tmp->getNext());
             tmp->setNext(newNode);
             newNode->setPrevious(tmp);
