@@ -4,10 +4,10 @@
 #include <sstream>
 #include <iomanip>
 
-#include "ListArray.h"
-#include "ListCursor.h"
-#include "ListPointer.h"
-#include "ListDoublePointer.h"
+#include "ListArray_for_test.h"
+#include "ListCursor_for_test.h"
+#include "ListPointer_for_test.h"
+#include "ListDoublePointer_for_test.h"
 
 #define WIDTH(x) std::setw(x)
 
@@ -15,8 +15,8 @@ namespace PrintList{
 
 	// Pretty print of list
 	template <typename TypeElem, int Length>
-	void printListArray(const NListArray::ListArray<TypeElem, Length>* list, int widthBuffer = 3){
-		NListArray::Position i=list->first();
+	void printListArray(const NListArrayTest::ListArray<TypeElem, Length>* list, int widthBuffer = 3){
+		NListArrayTest::Position i=list->first();
 
 		std::cout << std::endl;
 		std::cout << (char)201 << (char)205 << WIDTH(widthBuffer);  // ╔═
@@ -37,8 +37,8 @@ namespace PrintList{
 
 	// Pretty print of list
 	template <typename TypeElem>
-	void printListCursor(const NListCursor::ListCursor<TypeElem>* list, int widthBuffer = 3) {
-		NListCursor::Position i=list->first();
+	void printListCursor(const NListCursorTest::ListCursor<TypeElem>* list, int widthBuffer = 3) {
+		NListCursorTest::Position i=list->first();
 
 
 		std::cout << std::endl;
@@ -67,8 +67,8 @@ namespace PrintList{
 	}
 
 	template<typename TypeElem>
-	void printListPointer(const NListPointer::ListPointer<TypeElem>* list, int widthBuffer = 8){
-		NListPointer::Position<TypeElem> i=list->first();
+	void printListPointer(const NListPointerTest::ListPointer<TypeElem>* list, int widthBuffer = 8){
+		NListPointerTest::Position<TypeElem> i=list->first();
 
 
 		std::string cornerLeftTop(1,(char)201);
@@ -142,8 +142,8 @@ namespace PrintList{
 	}
 
 	template<typename TypeElem>
-	void printListDoublePointer(const NListDoublePointer::ListDoublePointer<TypeElem>* list, int widthBuffer = 10){
-		NListDoublePointer::Position<TypeElem> i=list->first();
+	void printListDoublePointer(const NListDoublePointerTest::ListDoublePointer<TypeElem>* list, int widthBuffer = 10){
+		NListDoublePointerTest::Position<TypeElem> i=list->first();
 
 
 		std::string cornerLeftTop(1,(char)201);

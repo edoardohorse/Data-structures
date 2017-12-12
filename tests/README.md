@@ -1,0 +1,1 @@
+Secondly, the test declaration has changed from TEST to TEST_F.   This lets the framework know that it shouldn’t generate the default fixture class but instead look for one you defined.
