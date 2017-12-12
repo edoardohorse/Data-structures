@@ -175,10 +175,11 @@ namespace PrintList{
 			pos = strStream.tellp();
 			strStream << WIDTH(2) << i;
 			strStream << (char)186;                                 // ║
-			strStream << "${|}" << list->get(i) << " ";
+			strStream << WIDTH(widthBuffer) << list->get(i) << " ";
 			strStream << (char)124 ;                        // |
-			strStream << "${|}" << list->next(i) << " ";
+			strStream << WIDTH(widthBuffer) << list->next(i) << " ";
 			strStream << (char)186;                                 // ║
+			strStream << WIDTH(widthBuffer) << list->previous(i) << " ";
 			strStream << std::endl;
 
 			delta = strStream.tellp();
@@ -201,6 +202,7 @@ namespace PrintList{
 		strStream << std::string((size_t)max, (char) 205);
 
 		toPrint = strStream.str() + "\n";
+		/*
 		strStream.seekp(0);
 		std::size_t last = toPrint.rfind("${|}");
 		std::size_t found = 0;
@@ -212,6 +214,7 @@ namespace PrintList{
 			//toPrint.replace(found,4, std::setw));
 		}
 		toPrint = strStream.str();
+		 */
 		std::cout << toPrint;
 	}
 }
