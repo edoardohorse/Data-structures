@@ -1,16 +1,19 @@
 #pragma once
 
-namespace NListPointer {
+namespace NListPointerTest {
 
-	template<typename TypeElem>
-	class ListPointer;
 
 	template<typename TypeElem>
 	class Node {
+	public:
+		Node* getNext() const {return next;}
+		void setNext(Node* n) {next = n;}
+		TypeElem getValue() const {return value;}
+		void setValue(TypeElem val) {value = val;}
+
 	private:
-		TypeElem value;
 		Node* next;
-		friend class ListPointer<TypeElem>;
+		TypeElem value;
 	};
 
 	template<typename TypeElem>
@@ -43,6 +46,8 @@ namespace NListPointer {
 
 		Position<TypeElem> previous(Position<TypeElem>) const;
 
+
+
 	private:
 		typedef Position<TypeElem> List;
 		List ls;
@@ -51,7 +56,7 @@ namespace NListPointer {
 	template<typename TypeElem>
 	ListPointer<TypeElem>::ListPointer() {
 		ls = new Node<TypeElem>;
-		ls->next = nullptr;
+		ls->setNext(nullptr);
 	}
 
 	template<typename TypeElem>
@@ -67,12 +72,12 @@ namespace NListPointer {
 
 	template<typename TypeElem>
 	bool ListPointer<TypeElem>::isEmpty() {
-		return ls->next == nullptr;
+		return ls->getNext() == nullptr;
 	}
 
 	template<typename TypeElem>
 	Position<TypeElem> ListPointer<TypeElem>::first() const {
-		return ls->next;
+		return ls->getNext();
 	}
 
 	template<typename TypeElem>
@@ -82,17 +87,17 @@ namespace NListPointer {
 
 	template<typename TypeElem>
 	Position<TypeElem> ListPointer<TypeElem>::next(Position<TypeElem> p) const {
-		return p->next;
+		return p->getNext();
 	}
 
 	template<typename TypeElem>
 	TypeElem ListPointer<TypeElem>::get(Position<TypeElem> p) const {
-		return p->value;
+		return p->getValue();
 	}
 
 	template<typename TypeElem>
 	void ListPointer<TypeElem>::set(Position<TypeElem> p, TypeElem e) const {
-		p->value = e;
+		p->setValue(e);
 	}
 
 	template<typename TypeElem>
@@ -107,15 +112,15 @@ namespace NListPointer {
 	template<typename TypeElem>
 	void ListPointer<TypeElem>::insert(Position<TypeElem>& p, TypeElem e) {
 		Position<TypeElem> newNode = new Node<TypeElem>;
-		newNode->value = e;
-		newNode->next = p;
+		newNode->setValue(e);
+		newNode->setNext(p);
 
-		if (p == ls->next) {
+		if (p == ls->getNext()) {
 
-			ls->next = newNode;
+			ls->setNext(newNode);
 		} else {
 			Position<TypeElem> prev = previous(p);
-			prev->next = newNode;
+			prev->setNext(newNode);
 
 		}
 		p = newNode;
@@ -126,50 +131,16 @@ namespace NListPointer {
 	void ListPointer<TypeElem>::remove(Position<TypeElem>& p) {
 		Position<TypeElem> toRemove = p;
 
-		if (p == ls->next) {
-			ls->next = toRemove->next;
+		if (p == ls->getNext()) {
+			ls->setNext(toRemove->getNext());
 		} else {
-			previous(toRemove)->next = toRemove->next;
+			previous(toRemove)->setNext(toRemove->getNext());
 		}
 
-		p = toRemove->next;
+		p = toRemove->getNext();
 		delete toRemove;
 	}
 
 
 }
 
-/*
- using namespace NListPointer;
-
-template <typename TypeElem>
-class ListaP;
-
-template <typename TypeElem>
-class Nodo{
-private:
-	TypeElem value;
-	friend class ListaP<TypeElem>;
-};
-
-template <typename TypeElem>
-class ListaP{
-private:
-
-	typedef Nodo<TypeElem>* List;
-	List ls = new Nodo<TypeElem>();
-
-
-public:
-
-	typedef Nodo<TypeElem>* Position;
-	List getFirst(){return ls;}
-	void setValue(Position p,TypeElem val){
-		ls->value = val;
-	}
-
-	TypeElem getValue(Position p) const{return ls->value;}
-
-};
-
- */
