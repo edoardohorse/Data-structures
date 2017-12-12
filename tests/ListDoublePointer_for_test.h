@@ -1,20 +1,21 @@
 #pragma once
 
-
-
-
 namespace NListDoublePointerTest{
 
     template<typename TypeElem>
-    class ListDoublePointer;
-
-    template<typename TypeElem>
     class Node{
+    public:
+        TypeElem getValue() const {return value;}
+        void setValue(TypeElem value) {Node::value = value;}
+        Node* getNext() const {return next;}
+        void setNext(Node* next) {Node::next = next;}
+        Node* getPrevious() const {return previous;}
+        void setPrevious(Node* previous) {Node::previous = previous;}
+
     private:
         TypeElem value;
         Node* next = nullptr;
         Node* previous = nullptr;
-        friend class ListDoublePointer<TypeElem>;
     };
 
 
@@ -44,7 +45,7 @@ namespace NListDoublePointerTest{
 
         void insert(Position<TypeElem>&, TypeElem);
 
-        void remove(Position<TypeElem>);
+        void remove(Position<TypeElem>&);
 
     private:
         typedef Position<TypeElem> List;
@@ -55,8 +56,8 @@ namespace NListDoublePointerTest{
     template<typename TypeElem>
     ListDoublePointer<TypeElem>::ListDoublePointer() {
         ls = new Node<TypeElem>;
-        ls->next = nullptr;
-        ls->previous = nullptr;
+        ls->setNext(nullptr);
+        ls->setPrevious(nullptr);
     }
 
     template<typename TypeElem>
@@ -72,72 +73,78 @@ namespace NListDoublePointerTest{
 
     template<typename TypeElem>
     bool ListDoublePointer<TypeElem>::isEmpty() const{
-        return (ls->next == nullptr);
+        return (ls->getNext() == nullptr);
     }
 
     template<typename TypeElem>
     Position<TypeElem> ListDoublePointer<TypeElem>::first() const{
-        return ls->next;
+        return ls->getNext();
     }
 
     template<typename TypeElem>
     bool ListDoublePointer<TypeElem>::isLast(Position<TypeElem> p) const{
-        return (p->next == nullptr);
+        return (p == nullptr);
     }
 
     template<typename TypeElem>
     Position<TypeElem> ListDoublePointer<TypeElem>::next(Position<TypeElem> p) const{
-        return p->next;
+        return p->getNext();
     }
 
     template<typename TypeElem>
     Position<TypeElem> ListDoublePointer<TypeElem>::previous(Position<TypeElem> p) const{
-        return p->previous;
+        return p->getPrevious();
     }
 
     template<typename TypeElem>
     TypeElem ListDoublePointer<TypeElem>::get(Position<TypeElem> p) const{
-        return p->value;
+        return p->getValue();
     }
 
     template<typename TypeElem>
     void ListDoublePointer<TypeElem>::set(Position<TypeElem> p, TypeElem e) {
-        p->value = e;
+        p->setValue(e);
     }
 
     template<typename TypeElem>
     void ListDoublePointer<TypeElem>::insert(Position<TypeElem>& p, TypeElem e) {
         Position<TypeElem> newNode = new Node<TypeElem>;
-        newNode->value = e;
-        newNode->next = p;
-        if(ls->next == p){
-            ls->next = newNode;
+        newNode->setValue(e);
+        newNode->setNext(p);
+
+        if(ls->getNext() == p){
+            ls->setNext(newNode);
+	        if(p!= nullptr){
+		        p->setPrevious(newNode);
+	        }
         }
         else{
-            Position<TypeElem> prev = p->previous;
-            newNode->previous = p->previous;
-            p->previous = newNode;
-        }
-
-        if(p!= nullptr){
-            p->previous = newNode;
+            Position<TypeElem> tmp = first();
+            while (next(tmp) != p) {
+                tmp = next(tmp);
+            }
+			newNode->setNext(tmp->getNext());
+            tmp->setNext(newNode);
+	        newNode->setPrevious(tmp);
         }
 
         p = newNode;
     }
 
     template<typename TypeElem>
-    void ListDoublePointer<TypeElem>::remove(Position<TypeElem> p) {
-        if(ls->next == p){
-            ls->next = p->next;
-            ls->next->previous = nullptr;
+    void ListDoublePointer<TypeElem>::remove(Position<TypeElem>& p) {
+        Position<TypeElem> toRemove = p;
+
+        if(ls->getNext() == toRemove){
+            ls->setNext( toRemove->getNext() );
+            ls->getNext()->setPrevious(nullptr);
         }
         else{
-            p->previous->next = p->next;
-            p->next->previous = p->previous;
+            toRemove->getPrevious()->setNext( toRemove->getNext() );
+            toRemove->getNext()->setPrevious( toRemove->getPrevious() );
         }
-
-        delete p;
+        p = toRemove->getNext();
+        delete toRemove;
     }
 
 }

@@ -4,18 +4,19 @@
 
 
 #include "PrettyPrintList_for_test.h"
-#include "ListPointer_for_test.h"
+#include "ListDoublePointer_for_test.h"
+
 
 using testing::Eq;
-using namespace NListPointer;
+using namespace NListDoublePointerTest;
 
 
-class ClassDeclaration: public testing::Test{
+class ListDoublePointerTest: public testing::Test{
 public:
 
-	ListPointer<std::string>* ls  = new ListPointer<std::string>;
-	ListPointer<char>* ls2 = new ListPointer<char>;
-	ClassDeclaration(){
+	ListDoublePointer<std::string>* ls  = new ListDoublePointer<std::string>;
+	ListDoublePointer<char>* ls2 = new ListDoublePointer<char>;
+	ListDoublePointerTest(){
 		Position<std::string> p = ls->first();
 		Position<char> p2 = ls2->first();
 
@@ -30,7 +31,7 @@ public:
 		ls->insert(p,"tornio");
 		ls->insert(p,"paese");
 
-//		PrintList::printListPointer(ls);
+//		PrintList::printListDoublePointer(ls);
 
 		// second method insertion (FIFO)
 		p2 = ls2->first();
@@ -48,28 +49,29 @@ public:
 		p2 = ls2->next(p2);
 		ls2->insert(p2,'g');
 
-//	    PrintList::printListPointer(ls2);
+//	    PrintList::printListDoublePointer(ls2);
 	}
-	~ClassDeclaration(){
+	~ListDoublePointerTest(){
 		delete ls,ls2;
 	}
 };
 
-TEST_F(ClassDeclaration, Empty){
-	ListPointer<int>* tmp = new ListPointer<int>;
+
+TEST_F(ListDoublePointerTest, Empty){
+	ListDoublePointer<int>* tmp = new ListDoublePointer<int>;
 	ASSERT_TRUE(tmp->isEmpty());
 	ASSERT_FALSE(ls2->isEmpty());
 	ASSERT_FALSE(ls->isEmpty());
 	delete tmp;
 }
 
-TEST_F(ClassDeclaration, First){
-//	ASSERT_EQ(ls2->first(), ls2->ls->next);
-
-//	ASSERT_EQ(ls->first(), ls2->ls->next);
+TEST_F(ListDoublePointerTest, First){
+	ListDoublePointer<int>* tmp = new ListDoublePointer<int>;
+	ASSERT_EQ(tmp->first(), nullptr);
+	delete tmp;
 }
 
-TEST_F(ClassDeclaration, Last){
+TEST_F(ListDoublePointerTest, Last){
 	//	LIFO
 	Position<char> p = ls2->first();
 	while(!ls2->isLast(p))
@@ -88,7 +90,7 @@ TEST_F(ClassDeclaration, Last){
 
 }
 
-TEST_F(ClassDeclaration, Next){
+TEST_F(ListDoublePointerTest, Next){
 	// LIFO
 	Position<std::string> p = ls->next(ls->first());
 	ASSERT_EQ(ls->get(p), "tornio");
@@ -99,7 +101,7 @@ TEST_F(ClassDeclaration, Next){
 	ASSERT_EQ(ls2->get(p2), 'b');
 }
 
-TEST_F(ClassDeclaration, Get){
+TEST_F(ListDoublePointerTest, Get){
 	// LIFO
 	Position<std::string> p = ls->first();
 	ASSERT_EQ(ls->get(p),"paese");
@@ -128,47 +130,49 @@ TEST_F(ClassDeclaration, Get){
 
 }
 
-TEST_F(ClassDeclaration, Set){
+TEST_F(ListDoublePointerTest, Set){
 	Position<std::string> p = ls->first();
 	ASSERT_EQ(ls->get(p),"paese");
 	ls->set(p, "popolo");
 	ASSERT_EQ(ls->get(p),"popolo");
+	ls->set(p, "paese");
 }
 
-TEST_F(ClassDeclaration, Insert){
+TEST_F(ListDoublePointerTest, Insert){
 
 }
 
-TEST_F(ClassDeclaration, Remove){
+
+TEST_F(ListDoublePointerTest, Remove){
 	// LIFO
-	ListPointer<std::string> tmp = *ls;
-	Position<std::string> p = tmp.first();
-	p = tmp.next(p);
-	p = tmp.next(p);
 
-	ASSERT_EQ(tmp.get(tmp.next(p)),"castoro");
-	ASSERT_EQ(tmp.get(tmp.previous(p)),"tornio");
+	Position<std::string> p = ls->first();
+	p = ls->next(p);
+	p = ls->next(p);
 
-	tmp.remove(p);                                  // Remove "luna"
-	ASSERT_EQ(tmp.get(p),"castoro");
-	ASSERT_EQ(tmp.get(tmp.previous(p)),"tornio");
+	ASSERT_EQ(ls->get(ls->next(p)),"castoro");
+	ASSERT_EQ(ls->get(ls->previous(p)),"tornio");
 
+	ls->remove(p);                                  // Remove "luna"
+	ASSERT_EQ(ls->get(p),"castoro");
+	ASSERT_EQ(ls->get(ls->previous(p)),"tornio");
+	ls->insert(p,"luna");
 
 	// FIFO
-	ListPointer<char> tmp2 = *ls2;
-	Position<char> p2 = tmp2.first();
-	p2 = tmp2.next(p2);
-	p2 = tmp2.next(p2);
+	Position<char> p2 = ls2->first();
+	p2 = ls2->next(p2);
+	p2 = ls2->next(p2);
 
-	ASSERT_EQ(tmp2.get(p2),'c');
-	ASSERT_EQ(tmp2.get(tmp2.previous(p2)),'b');
+	ASSERT_EQ(ls2->get(p2),'c');
+	ASSERT_EQ(ls2->get(ls2->previous(p2)),'b');
 
-	tmp2.remove(p2);                                  // Remove 'c'
-	ASSERT_EQ(tmp2.get(p2),'d');
-	ASSERT_EQ(tmp2.get(tmp2.previous(p2)),'b');
+	ls2->remove(p2);                                  // Remove 'c'
+	ASSERT_EQ(ls2->get(p2),'d');
+	ASSERT_EQ(ls2->get(ls2->previous(p2)),'b');
+	ls2->insert(p2,'c');
 }
 
-TEST_F(ClassDeclaration, Previous){
+TEST_F(ListDoublePointerTest, Previous){
 	// LIFO
 	Position<std::string> p = ls->first();
 	p = ls->next(p);
