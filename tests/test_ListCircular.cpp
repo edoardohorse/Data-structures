@@ -11,7 +11,7 @@ public:
 	
 	
 	ListCircular<std::string>* ls = new ListCircular<std::string>;
-	ListCircular<int>* ls2 = new ListCircular<int>();
+	ListCircular<int>* ls2 = new ListCircular<int>;
 	ListCircularTest(){
 
 		auto p = ls->first();
@@ -58,7 +58,7 @@ TEST_F(ListCircularTest, Empty){
 
 TEST_F(ListCircularTest, First){
 	ListCircular<int>* tmp = new ListCircular<int>;
-	ASSERT_EQ(tmp->first(), nullptr);
+	ASSERT_EQ(tmp->first(), tmp->next(tmp->first()));
 	delete tmp;
 }
 
