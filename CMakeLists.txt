@@ -10,7 +10,8 @@ include_directories(lib/googletest/include)
 include_directories(lib/googlemock/include)
 
 
-set(SOURCE_FILES main.cpp PrettyPrintList.h ListArray.h ListCursor.h ListPointer.h ListDoublePointer.h ListCircular.h)
+set(SOURCE_FILES main.cpp PrettyPrintList.h ListArray.h ListCursor.h
+        ListPointer.h ListDoublePointer.h ListCircular.h StackArray.h)
 
 add_executable(Data_structures ${SOURCE_FILES})
 
@@ -22,7 +23,7 @@ set(TEST_LIST_CURSOR ${TEST_COMMONS} tests/test_ListCursor.cpp tests/ListCursor_
 set(TEST_LIST_POINTER ${TEST_COMMONS} tests/test_ListPointer.cpp tests/ListPointer_for_test.h)
 set(TEST_LIST_DOUBLE_POINTER ${TEST_COMMONS} tests/test_ListDoublePointer.cpp tests/ListDoublePointer_for_test.h)
 set(TEST_LIST_CIRCULAR ${TEST_COMMONS} tests/test_ListCircular.cpp tests/ListCircular_for_test.h)
-set(TEST_STACK ${TEST_COMMONS} tests/test_Stack.cpp tests/Stack_for_test.h)
+set(TEST_STACK ${TEST_COMMONS} tests/test_StackArray.cpp tests/StackArray_for_test.h)
 
 
 add_executable(Test_LA ${TEST_LIST_ARRAY} tests/test_main.cpp)
