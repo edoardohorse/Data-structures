@@ -87,7 +87,7 @@ namespace NListCircular{
 
 	template<typename TypeElem>
 	bool ListCircular<TypeElem>::isLast(Position<TypeElem> p) const{
-		return (p == sentinel->getPrevious());
+		return (p == sentinel);
 	}
 
 	template<typename TypeElem>
