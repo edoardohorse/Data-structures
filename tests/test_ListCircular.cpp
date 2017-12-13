@@ -68,13 +68,13 @@ TEST_F(ListCircularTest, Last){
 		p2 = ls2->next(p2);
 
 	ASSERT_TRUE(ls2->isLast(p2));
-	ASSERT_EQ(ls2->get(p2),7);
+	ASSERT_EQ(ls2->next(p2),ls2->first());
 
 	Position<std::string> p = ls->first();
 	while(!ls->isLast(p))
 		p = ls->next(p);
 	ASSERT_TRUE(ls->isLast(p));
-	ASSERT_EQ(ls->get(p),"abecedario");
+	ASSERT_EQ(ls->next(p),ls->first());
 }
 
 TEST_F(ListCircularTest, Next){
