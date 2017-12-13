@@ -12,12 +12,12 @@ using testing::Eq;
 using namespace NListPointerTest;
 
 
-class ClassDeclaration: public testing::Test{
+class ListCursorTest: public testing::Test{
 public:
 
 	ListPointer<std::string>* ls  = new ListPointer<std::string>;
 	ListPointer<char>* ls2 = new ListPointer<char>;
-	ClassDeclaration(){
+	ListCursorTest(){
 		Position<std::string> p = ls->first();
 		Position<char> p2 = ls2->first();
 
@@ -52,13 +52,13 @@ public:
 
 //	    PrintList::printListPointer(ls2);
 	}
-	~ClassDeclaration(){
+	~ListCursorTest(){
 		delete ls,ls2;
 	}
 };
 
 
-TEST_F(ClassDeclaration, Empty){
+TEST_F(ListCursorTest, Empty){
 	ListPointer<int>* tmp = new ListPointer<int>;
 	ASSERT_TRUE(tmp->isEmpty());
 	ASSERT_FALSE(ls2->isEmpty());
@@ -66,13 +66,13 @@ TEST_F(ClassDeclaration, Empty){
 	delete tmp;
 }
 
-TEST_F(ClassDeclaration, First){
+TEST_F(ListCursorTest, First){
 	ListPointer<int>* tmp = new ListPointer<int>;
 	ASSERT_EQ(tmp->first(), nullptr);
 	delete tmp;
 }
 
-TEST_F(ClassDeclaration, Last){
+TEST_F(ListCursorTest, Last){
 	//	LIFO
 	Position<char> p = ls2->first();
 	while(!ls2->isLast(p))
@@ -91,7 +91,7 @@ TEST_F(ClassDeclaration, Last){
 
 }
 
-TEST_F(ClassDeclaration, Next){
+TEST_F(ListCursorTest, Next){
 	// LIFO
 	Position<std::string> p = ls->next(ls->first());
 	ASSERT_EQ(ls->get(p), "tornio");
@@ -102,10 +102,11 @@ TEST_F(ClassDeclaration, Next){
 	ASSERT_EQ(ls2->get(p2), 'b');
 }
 
-TEST_F(ClassDeclaration, Get){
+TEST_F(ListCursorTest, Get){
 	// LIFO
-	Position<std::string> p = ls->first();
-	ASSERT_EQ(ls->get(p),"paese");
+	Position<std::string> p;
+
+	p = ls->first();ASSERT_EQ(ls->get(p),"paese");
 	p = ls->next(p); ASSERT_EQ(ls->get(p),"tornio");
 	p = ls->next(p); ASSERT_EQ(ls->get(p),"luna");
 	p = ls->next(p); ASSERT_EQ(ls->get(p),"castoro");
@@ -131,7 +132,7 @@ TEST_F(ClassDeclaration, Get){
 
 }
 
-TEST_F(ClassDeclaration, Set){
+TEST_F(ListCursorTest, Set){
 	Position<std::string> p = ls->first();
 	ASSERT_EQ(ls->get(p),"paese");
 	ls->set(p, "popolo");
@@ -139,47 +140,61 @@ TEST_F(ClassDeclaration, Set){
 	ls->set(p, "paese");
 }
 
-TEST_F(ClassDeclaration, Insert){
+TEST_F(ListCursorTest, Insert){
 
 }
 
 
-TEST_F(ClassDeclaration, Remove){
+TEST_F(ListCursorTest, Remove){
 	// LIFO
-	ListPointer<std::string>* tmp = new ListPointer<std::string>;
-	Position<std::string> p = tmp->first();
-    tmp->insert(p, "prova");
-    tmp->insert(p, "prova2");
-    tmp->insert(p, "prova3");
-    p = tmp->first();
-	p = tmp->next(p);
+	Position<std::string> p = ls->first();
+	p = ls->next(p);
+	p = ls->next(p);
 
-	ASSERT_EQ(tmp->get(tmp->next(p)),"prova");
-	ASSERT_EQ(tmp->get(tmp->previous(p)),"prova3");
+	ASSERT_EQ(ls->get(p),"luna");
+	ASSERT_EQ(ls->get(ls->previous(p)),"tornio");
 
-	tmp->remove(p);                                  // Remove "luna"
-	ASSERT_EQ(tmp->get(p),"prova");
-	ASSERT_EQ(tmp->get(tmp->previous(p)),"prova3");
-    delete tmp;
+	ls->remove(p);                                  // Remove "luna"
+	ASSERT_EQ(ls->get(p),"castoro");
+	ASSERT_EQ(ls->get(ls->previous(p)),"tornio");
+	ls->insert(p,"luna");
+
+	p = ls->first();ASSERT_EQ(ls->get(p),"paese");
+	p = ls->next(p); ASSERT_EQ(ls->get(p),"tornio");
+	p = ls->next(p); ASSERT_EQ(ls->get(p),"luna");
+	p = ls->next(p); ASSERT_EQ(ls->get(p),"castoro");
+	p = ls->next(p); ASSERT_EQ(ls->get(p),"casale");
+	p = ls->next(p); ASSERT_EQ(ls->get(p),"barattolo");
+	p = ls->next(p); ASSERT_EQ(ls->get(p),"bambola");
+	p = ls->next(p); ASSERT_EQ(ls->get(p),"aperitivo");
+	p = ls->next(p); ASSERT_EQ(ls->get(p),"abecedario");
 
 
 	// FIFO
-	ListPointer<char> tmp2 = *ls2;
-	Position<char> p2 = tmp2.first();
-	p2 = tmp2.next(p2);
-	p2 = tmp2.next(p2);
+	Position<char> p2 = ls2->first();
+	p2 = ls2->next(p2);
+	p2 = ls2->next(p2);
 
-	ASSERT_EQ(tmp2.get(p2),'c');
-	ASSERT_EQ(tmp2.get(tmp2.previous(p2)),'b');
+	ASSERT_EQ(ls2->get(p2),'c');
+	ASSERT_EQ(ls2->get(ls2->previous(p2)),'b');
 
-	tmp2.remove(p2);                                  // Remove 'c'
-	ASSERT_EQ(tmp2.get(p2),'d');
-	ASSERT_EQ(tmp2.get(tmp2.previous(p2)),'b');
+	ls2->remove(p2);                                  // Remove 'c'
+	ASSERT_EQ(ls2->get(p2),'d');
+	ASSERT_EQ(ls2->get(ls2->previous(p2)),'b');
+	ls2->insert(p2, 'c');
+
+	p2 = ls2->first();  ASSERT_EQ(ls2->get(p2),'a');
+	p2 = ls2->next(p2); ASSERT_EQ(ls2->get(p2),'b');
+	p2 = ls2->next(p2); ASSERT_EQ(ls2->get(p2),'c');
+	p2 = ls2->next(p2); ASSERT_EQ(ls2->get(p2),'d');
+	p2 = ls2->next(p2); ASSERT_EQ(ls2->get(p2),'e');
+	p2 = ls2->next(p2); ASSERT_EQ(ls2->get(p2),'f');
+	p2 = ls2->next(p2); ASSERT_EQ(ls2->get(p2),'g');
 
 
 }
 
-TEST_F(ClassDeclaration, Previous){
+TEST_F(ListCursorTest, Previous){
 	// LIFO
 	Position<std::string> p = ls->first();
 	p = ls->next(p);

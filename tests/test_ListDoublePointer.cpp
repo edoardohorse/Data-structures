@@ -103,8 +103,8 @@ TEST_F(ListDoublePointerTest, Next){
 
 TEST_F(ListDoublePointerTest, Get){
 	// LIFO
-	Position<std::string> p = ls->first();
-	ASSERT_EQ(ls->get(p),"paese");
+	Position<std::string> p;
+	p = ls->first(); ASSERT_EQ(ls->get(p),"paese");
 	p = ls->next(p); ASSERT_EQ(ls->get(p),"tornio");
 	p = ls->next(p); ASSERT_EQ(ls->get(p),"luna");
 	p = ls->next(p); ASSERT_EQ(ls->get(p),"castoro");
@@ -150,13 +150,25 @@ TEST_F(ListDoublePointerTest, Remove){
 	p = ls->next(p);
 	p = ls->next(p);
 
-	ASSERT_EQ(ls->get(ls->next(p)),"castoro");
+	ASSERT_EQ(ls->get(p),"luna");
 	ASSERT_EQ(ls->get(ls->previous(p)),"tornio");
 
 	ls->remove(p);                                  // Remove "luna"
 	ASSERT_EQ(ls->get(p),"castoro");
 	ASSERT_EQ(ls->get(ls->previous(p)),"tornio");
 	ls->insert(p,"luna");
+
+	p = ls->first(); ASSERT_EQ(ls->get(p),"paese");
+	p = ls->next(p); ASSERT_EQ(ls->get(p),"tornio");
+	p = ls->next(p); ASSERT_EQ(ls->get(p),"luna");
+	p = ls->next(p); ASSERT_EQ(ls->get(p),"castoro");
+	p = ls->next(p); ASSERT_EQ(ls->get(p),"casale");
+	p = ls->next(p); ASSERT_EQ(ls->get(p),"barattolo");
+	p = ls->next(p); ASSERT_EQ(ls->get(p),"bambola");
+	p = ls->next(p); ASSERT_EQ(ls->get(p),"aperitivo");
+	p = ls->next(p); ASSERT_EQ(ls->get(p),"abecedario");
+
+
 
 	// FIFO
 	Position<char> p2 = ls2->first();
@@ -170,6 +182,15 @@ TEST_F(ListDoublePointerTest, Remove){
 	ASSERT_EQ(ls2->get(p2),'d');
 	ASSERT_EQ(ls2->get(ls2->previous(p2)),'b');
 	ls2->insert(p2,'c');
+
+	p2 = ls2->first();  ASSERT_EQ(ls2->get(p2),'a');
+	p2 = ls2->next(p2); ASSERT_EQ(ls2->get(p2),'b');
+	p2 = ls2->next(p2); ASSERT_EQ(ls2->get(p2),'c');
+	p2 = ls2->next(p2); ASSERT_EQ(ls2->get(p2),'d');
+	p2 = ls2->next(p2); ASSERT_EQ(ls2->get(p2),'e');
+	p2 = ls2->next(p2); ASSERT_EQ(ls2->get(p2),'f');
+	p2 = ls2->next(p2); ASSERT_EQ(ls2->get(p2),'g');
+
 }
 
 TEST_F(ListDoublePointerTest, Previous){
