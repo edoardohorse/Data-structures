@@ -126,7 +126,7 @@ namespace NListDoublePointer{
                 }
             }
             else
-                tmp = p;
+                tmp = p->getPrevious();
             newNode->setNext(tmp->getNext());
             tmp->setNext(newNode);
             newNode->setPrevious(tmp);
