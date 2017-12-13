@@ -35,6 +35,9 @@ namespace NListCursor {
 		// Return a cursor pointing to the next position of a given Node position
 		Position next(Position) const;
 
+		// Return the position of Node that has as next Node the given one
+		Position previous(Position);
+
 		// Return the value of a Node
 		TypeElem get(Position) const;
 
@@ -46,42 +49,6 @@ namespace NListCursor {
 
 		// Remove a Node from list
 		void remove(Position&);
-
-		// Return the position of Node that has as next Node the given one
-		Position previous(Position);
-
-		/*
-		void print() {
-			int widthBuffer = 3;
-			Position i;
-
-			std::cout << "  ";
-			std::cout << (char)201 << (char)205 << WIDTH(widthBuffer);  // ╔═
-			std::cout << std::string(7, (char)205);
-			std::cout << (char)205 << (char)187;                        // ═╗
-			std::cout << std::endl;
-
-			for(i= 0; i < MAXLENGTH+1 ; i++){
-				std::cout << WIDTH(2) << i;
-				std::cout << (char) 186;                                 // ║
-				std::cout << WIDTH(widthBuffer) << get(i) << " ";
-				std::cout << (char) 124;                        // |
-				std::cout << WIDTH(widthBuffer) << next(i) << " ";
-				std::cout << (char) 186;                                 // ║
-				std::cout << std::endl;
-			}
-
-			std::cout << "  ";
-			std::cout << (char) 200 << (char) 205 << WIDTH(widthBuffer);  // ╚═
-			std::cout << std::string(7, (char) 205);
-			std::cout << (char) 205 << (char) 188;                        // ═╝
-
-			std::cout << std::endl;
-			std::cout << "Libera: " << space.free;
-			std::cout << std::endl;
-			std::cout << std::endl;
-		}
-		*/
 
 	private:
 
@@ -129,6 +96,15 @@ namespace NListCursor {
 	Position ListCursor<TypeElem>::next(Position p) const { return space.v[p].next; }
 
 	template<typename TypeElem>
+	Position ListCursor<TypeElem>::previous(Position p) {
+		Position tmp = first();
+		while (next(tmp) != p) {
+			tmp = next(tmp);
+		}
+		return tmp;
+	}
+
+	template<typename TypeElem>
 	TypeElem ListCursor<TypeElem>::get(Position p) const { return space.v[p].value; }
 
 	template<typename TypeElem>
@@ -149,9 +125,9 @@ namespace NListCursor {
 		Position tmp = space.v[p].next;
 		space.v[previous(p)].next = space.v[p].next;
 
-		#ifdef DEBUG_
-				space.v[p].value = (TypeElem) NULL;
-		#endif
+#ifdef DEBUG_
+		space.v[p].value = (TypeElem) NULL;
+#endif
 
 		space.v[p].next = space.free;
 		space.free = p;
@@ -159,34 +135,25 @@ namespace NListCursor {
 	}
 
 	template<typename TypeElem>
-	Position ListCursor<TypeElem>::previous(Position p) {
-		Position tmp = first();
-		while (next(tmp) != p) {
-			tmp = next(tmp);
-		}
-		return tmp;
-	}
-
-	template<typename TypeElem>
 	void ListCursor<TypeElem>::init() {
 		space.free = 1;
 		space.v[0].next = 0;
 
-		#ifdef DEBUG_
-				space.v[0].value = (TypeElem) NULL;
+#ifdef DEBUG_
+		space.v[0].value = (TypeElem) NULL;
 
-		#endif
+#endif
 		for (int i = 1; i < MAXLENGTH; i++) {
 
-		#ifdef DEBUG_
-					space.v[i].value = (TypeElem) NULL;
-		#endif
+#ifdef DEBUG_
+			space.v[i].value = (TypeElem) NULL;
+#endif
 			space.v[i].next = i + 1;
 		}
 
-		#ifdef DEBUG_
-				space.v[MAXLENGTH].value = (TypeElem) NULL;
-		#endif
+#ifdef DEBUG_
+		space.v[MAXLENGTH].value = (TypeElem) NULL;
+#endif
 
 		space.v[MAXLENGTH].next = 0;
 	}
@@ -200,30 +167,5 @@ namespace NListCursor {
 	}
 
 
-/*
-   auto L = new NListCursor::ListCursor<char>();
 
-    NListCursor::Position p = L->first();
-
-    L->insert(p,'a');
-    p = L->next(p);
-    L->insert(p,'b');
-    p = L->next(p);
-    L->insert(p,'c');
-    p = L->next(p);
-    L->insert(p,'d');
-    p = L->next(p);
-
-
- 	L->remove(3);
-    PrintList::printListCursor(L);
-
-
-
-	delete L;
- *
- *
- *
- *
- * */
 }

@@ -36,6 +36,8 @@ namespace NListPointerTest {
 
 		Position<TypeElem> next(Position<TypeElem>) const;
 
+		Position<TypeElem> previous(Position<TypeElem>) const;
+
 		TypeElem get(Position<TypeElem>) const;
 
 		void set(Position<TypeElem>, TypeElem) const;
@@ -44,7 +46,6 @@ namespace NListPointerTest {
 
 		void remove(Position<TypeElem>&);
 
-		Position<TypeElem> previous(Position<TypeElem>) const;
 
 
 
@@ -91,6 +92,15 @@ namespace NListPointerTest {
 	}
 
 	template<typename TypeElem>
+	Position<TypeElem> ListPointer<TypeElem>::previous(Position<TypeElem> p) const {
+		Position<TypeElem> tmp = first();
+		while (next(tmp) != p) {
+			tmp = next(tmp);
+		}
+		return tmp;
+	}
+
+	template<typename TypeElem>
 	TypeElem ListPointer<TypeElem>::get(Position<TypeElem> p) const {
 		return p->getValue();
 	}
@@ -98,15 +108,6 @@ namespace NListPointerTest {
 	template<typename TypeElem>
 	void ListPointer<TypeElem>::set(Position<TypeElem> p, TypeElem e) const {
 		p->setValue(e);
-	}
-
-	template<typename TypeElem>
-	Position<TypeElem> ListPointer<TypeElem>::previous(Position<TypeElem> p) const {
-		Position<TypeElem> tmp = first();
-		while (next(tmp) != p) {
-			tmp = next(tmp);
-		}
-		return tmp;
 	}
 
 	template<typename TypeElem>
