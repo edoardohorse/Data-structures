@@ -10,7 +10,7 @@ include_directories(lib/googletest/include)
 include_directories(lib/googlemock/include)
 
 
-set(SOURCE_FILES main.cpp PrettyPrintList.h ListArray.h ListCursor.h ListPointer.h ListDoublePointer.h)
+set(SOURCE_FILES main.cpp PrettyPrintList.h ListArray.h ListCursor.h ListPointer.h ListDoublePointer.h ListCircular.h)
 
 add_executable(Data_structures ${SOURCE_FILES})
 
@@ -21,16 +21,19 @@ set(TEST_LIST_ARRAY ${TEST_COMMONS} tests/test_ListArray.cpp tests/ListArray_for
 set(TEST_LIST_CURSOR ${TEST_COMMONS} tests/test_ListCursor.cpp tests/ListCursor_for_test.h)
 set(TEST_LIST_POINTER ${TEST_COMMONS} tests/test_ListPointer.cpp tests/ListPointer_for_test.h)
 set(TEST_LIST_DOUBLE_POINTER ${TEST_COMMONS} tests/test_ListDoublePointer.cpp tests/ListDoublePointer_for_test.h)
+set(TEST_LIST_CIRCULAR ${TEST_COMMONS} tests/test_ListCircular.cpp tests/ListCircular_for_test.h)
 
 
 add_executable(Test_LA ${TEST_LIST_ARRAY} tests/test_main.cpp)
-add_executable(Test_LC ${TEST_LIST_CURSOR} tests/test_main.cpp)
+add_executable(Test_LCU ${TEST_LIST_CURSOR} tests/test_main.cpp)
 add_executable(Test_LP ${TEST_LIST_POINTER} tests/test_main.cpp)
 add_executable(Test_LDP ${TEST_LIST_DOUBLE_POINTER} tests/test_main.cpp)
+add_executable(Test_LCI ${TEST_LIST_CIRCULAR} tests/test_main.cpp)
 
 
 target_link_libraries(Test_LA gtest gtest_main)
-target_link_libraries(Test_LC gtest gtest_main)
+target_link_libraries(Test_LCU gtest gtest_main)
 target_link_libraries(Test_LP gtest gtest_main)
 target_link_libraries(Test_LDP gtest gtest_main)
+target_link_libraries(Test_LCI gtest gtest_main)
 
