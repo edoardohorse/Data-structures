@@ -19,7 +19,7 @@ public:
 		stk->push(7);
 	}
 
-	~StackArrayTest() {
+	~StackArrayTest(){
 		delete stk;
 	}
 

@@ -9,22 +9,22 @@ namespace NListCircularTest{
 		Node* previous = nullptr;
 
 	public:
-		TypeElem getValue() const {
+		TypeElem getValue(){
 			return value;
 		}
-		void setValue(TypeElem value) {
+		void setValue(TypeElem value){
 			Node::value = value;
 		}
-		Node* getNext() const {
+		Node* getNext(){
 			return next;
 		}
-		void setNext(Node* next) {
+		void setNext(Node* next){
 			Node::next = next;
 		}
-		Node* getPrevious() const {
+		Node* getPrevious(){
 			return previous;
 		}
-		void setPrevious(Node* previous) {
+		void setPrevious(Node* previous){
 			Node::previous = previous;
 		}
 	};
@@ -37,12 +37,12 @@ namespace NListCircularTest{
 	public:
 		ListCircular();
 		~ListCircular();
-		bool isEmpty() const;
-		Position<TypeElem> first() const;
-		bool isLast(Position<TypeElem>) const;
-		Position<TypeElem> next(Position<TypeElem>) const;
-		Position<TypeElem> previous(Position<TypeElem>) const;
-		TypeElem get(Position<TypeElem>) const;
+		bool isEmpty();
+		Position<TypeElem> first();
+		bool isLast(Position<TypeElem>);
+		Position<TypeElem> next(Position<TypeElem>);
+		Position<TypeElem> previous(Position<TypeElem>);
+		TypeElem get(Position<TypeElem>);
 		void set(Position<TypeElem>, TypeElem);
 		void insert(Position<TypeElem>&,TypeElem);
 		void remove(Position<TypeElem>&);
@@ -54,7 +54,7 @@ namespace NListCircularTest{
 	};
 
 	template<typename TypeElem>
-	ListCircular<TypeElem>::ListCircular() {
+	ListCircular<TypeElem>::ListCircular(){
 		ls = new Node<TypeElem>;
 		sentinel = new Node<TypeElem>;
 
@@ -64,7 +64,7 @@ namespace NListCircularTest{
 	}
 
 	template<typename TypeElem>
-	ListCircular<TypeElem>::~ListCircular() {
+	ListCircular<TypeElem>::~ListCircular(){
 		Position<TypeElem> tmp = first();
 		while(!isLast(tmp)){
 			Position<TypeElem> p = tmp;
@@ -76,42 +76,42 @@ namespace NListCircularTest{
 	}
 
 	template<typename TypeElem>
-	bool ListCircular<TypeElem>::isEmpty() const{
+	bool ListCircular<TypeElem>::isEmpty(){
 		return (sentinel->getNext() == sentinel);
 	}
 
 	template<typename TypeElem>
-	Position<TypeElem> ListCircular<TypeElem>::first() const{
+	Position<TypeElem> ListCircular<TypeElem>::first(){
 		return sentinel->getNext();
 	}
 
 	template<typename TypeElem>
-	bool ListCircular<TypeElem>::isLast(Position<TypeElem> p) const{
+	bool ListCircular<TypeElem>::isLast(Position<TypeElem> p){
 		return (p == sentinel);
 	}
 
 	template<typename TypeElem>
-	Position<TypeElem> ListCircular<TypeElem>::next(Position<TypeElem> p) const{
+	Position<TypeElem> ListCircular<TypeElem>::next(Position<TypeElem> p){
 		return p->getNext();
 	}
 
 	template<typename TypeElem>
-	Position<TypeElem> ListCircular<TypeElem>::previous(Position<TypeElem> p) const{
+	Position<TypeElem> ListCircular<TypeElem>::previous(Position<TypeElem> p){
 		return p->getPrevious();
 	}
 
 	template<typename TypeElem>
-	TypeElem ListCircular<TypeElem>::get(Position<TypeElem> p) const{
+	TypeElem ListCircular<TypeElem>::get(Position<TypeElem> p){
 		return p->getValue();
 	}
 
 	template<typename TypeElem>
-	void ListCircular<TypeElem>::set(Position<TypeElem>p , TypeElem e) {
+	void ListCircular<TypeElem>::set(Position<TypeElem>p , TypeElem e){
 		p->setValue(e);
 	}
 
 	template<typename TypeElem>
-	void ListCircular<TypeElem>::insert(Position<TypeElem>& p, TypeElem e) {
+	void ListCircular<TypeElem>::insert(Position<TypeElem>& p, TypeElem e){
 		Position<TypeElem> newNode = new Node<TypeElem>;
 		newNode->setValue(e);
 		newNode->setNext(p);
@@ -124,7 +124,7 @@ namespace NListCircularTest{
 	}
 
 	template<typename TypeElem>
-	void ListCircular<TypeElem>::remove(Position<TypeElem>& p) {
+	void ListCircular<TypeElem>::remove(Position<TypeElem>& p){
 		Position<TypeElem> toRemove = p;
 
 		if(p == ls->getNext()){

@@ -17,10 +17,10 @@ namespace NListArrayTest {
 		bool isEmpty();
 
 		// Check if a given position is the last one
-		bool isLast(Position) const;
+		bool isLast(Position);
 
 		// Return first index
-		Position first() const;
+		Position first();
 
 		// Return the next position
 		Position next(Position);
@@ -29,7 +29,7 @@ namespace NListArrayTest {
 		Position previous(Position);
 
 		// Return the value of a given position
-		TypeElem get(Position) const;
+		TypeElem get(Position);
 
 		// Set a value to a given position
 		void set(Position, TypeElem);
@@ -51,39 +51,39 @@ namespace NListArrayTest {
 
 
 	template<typename TypeElem, int MaxLength>
-	ListArray<TypeElem, MaxLength>::ListArray() { length = 0; }
+	ListArray<TypeElem, MaxLength>::ListArray(){ length = 0; }
 
 	template<typename TypeElem, int MaxLength>
-	bool ListArray<TypeElem, MaxLength>::isEmpty() { return length == 0; }
+	bool ListArray<TypeElem, MaxLength>::isEmpty(){ return length == 0; }
 
 	template<typename TypeElem, int MaxLength>
-	bool ListArray<TypeElem, MaxLength>::isLast(Position pos) const { return (length)  == pos; }
+	bool ListArray<TypeElem, MaxLength>::isLast(Position pos){ return (length)  == pos; }
 
 	template<typename TypeElem, int MaxLength>
-	Position ListArray<TypeElem, MaxLength>::first() const { return 1; }
+	Position ListArray<TypeElem, MaxLength>::first(){ return 1; }
 
 	template<typename TypeElem, int MaxLength>
-	Position ListArray<TypeElem, MaxLength>::next(Position pos) {
+	Position ListArray<TypeElem, MaxLength>::next(Position pos){
 		return pos+1;
 	}
 
 	template<typename TypeElem, int MaxLength>
-	Position ListArray<TypeElem, MaxLength>::previous(Position pos) {
+	Position ListArray<TypeElem, MaxLength>::previous(Position pos){
 		return pos-1;
 	}
 
 	template<typename TypeElem, int MaxLength>
-	TypeElem ListArray<TypeElem, MaxLength>::get(Position pos) const { return list[pos]; }
+	TypeElem ListArray<TypeElem, MaxLength>::get(Position pos){ return list[pos]; }
 
 	template<typename TypeElem, int MaxLength>
-	void ListArray<TypeElem, MaxLength>::set(Position pos, TypeElem val) {
+	void ListArray<TypeElem, MaxLength>::set(Position pos, TypeElem val){
 		list[pos] = val;
 	}
 
 	template<typename TypeElem, int MaxLength>
-	void ListArray<TypeElem, MaxLength>::insert(Position pos, TypeElem val) {
+	void ListArray<TypeElem, MaxLength>::insert(Position pos, TypeElem val){
 		Position i;
-		for (i = length ; i >= pos; i--) {
+		for (i = length ; i >= pos; i--){
 			list[i + 1] = list[i];
 		}
 		list[pos] = val;
@@ -91,8 +91,8 @@ namespace NListArrayTest {
 	}
 
 	template<typename TypeElem, int MaxLength>
-	void ListArray<TypeElem, MaxLength>::remove(Position pos) {
-		for (Position i = pos; i < length ; i++) {
+	void ListArray<TypeElem, MaxLength>::remove(Position pos){
+		for (Position i = pos; i < length ; i++){
 			list[i] = list[i + 1];
 		}
 		length--;

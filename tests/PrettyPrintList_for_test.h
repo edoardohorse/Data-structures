@@ -9,6 +9,7 @@
 #include "ListPointer_for_test.h"
 #include "ListDoublePointer_for_test.h"
 #include "ListCircular_for_test.h"
+#include "StackArray_for_test.h"
 
 #define WIDTH(x) std::setw(x)
 
@@ -16,7 +17,7 @@ namespace PrintList{
 
 	// Pretty print of list
 	template <typename TypeElem, int Length>
-	void printListArray(const NListArrayTest::ListArray<TypeElem, Length>* list, int widthBuffer = 3){
+	void printListArray( NListArrayTest::ListArray<TypeElem, Length>* list, int widthBuffer = 3){
 		NListArrayTest::Position i=list->first();
 
 		std::cout << std::endl;
@@ -38,7 +39,7 @@ namespace PrintList{
 
 	// Pretty print of list
 	template <typename TypeElem>
-	void printListCursor(const NListCursorTest::ListCursor<TypeElem>* list, int widthBuffer = 3) {
+	void printListCursor( NListCursorTest::ListCursor<TypeElem>* list, int widthBuffer = 3){
 		NListCursorTest::Position i=list->first();
 
 
@@ -68,7 +69,7 @@ namespace PrintList{
 	}
 
 	template<typename TypeElem>
-	void printListPointer(const NListPointerTest::ListPointer<TypeElem>* list, int widthBuffer = 8){
+	void printListPointer( NListPointerTest::ListPointer<TypeElem>* list, int widthBuffer = 8){
 		NListPointerTest::Position<TypeElem> i=list->first();
 
 
@@ -143,7 +144,7 @@ namespace PrintList{
 	}
 
 	template<typename TypeElem>
-	void printListDoublePointer(const NListDoublePointerTest::ListDoublePointer<TypeElem>* list, int widthBuffer = 10){
+	void printListDoublePointer( NListDoublePointerTest::ListDoublePointer<TypeElem>* list, int widthBuffer = 10){
 		NListDoublePointerTest::Position<TypeElem> i=list->first();
 
 
@@ -220,7 +221,7 @@ namespace PrintList{
 	}
 
 	template<typename TypeElem>
-	void printListCircular(const NListCircularTest::ListCircular<TypeElem>* list, int widthBuffer = 10){
+	void printListCircular( NListCircularTest::ListCircular<TypeElem>* list, int widthBuffer = 10){
 		NListCircularTest::Position<TypeElem> i=list->first();
 
 
@@ -295,6 +296,34 @@ namespace PrintList{
 		toPrint = strStream.str();
 		 */
 		std::cout << toPrint;
+	}
+
+	template<typename TypeElem>
+	void printStackArray(NStackArrayTest::StackArray<TypeElem>* list, int widthBuffer = 5){
+		auto tmp = new NStackArrayTest::StackArray<TypeElem>;
+		while(!list->isEmpty()){
+			tmp->push(list->top());
+			list->pop();
+		}
+
+		std::cout << std::endl;
+		std::cout << (char)201 << (char)205 << WIDTH(widthBuffer);  // ╔═
+		std::cout << (char)205 << (char)187;                        // ═╗
+		std::cout << std::endl;
+
+		do{
+
+			std::cout << (char)186;                                 // ║
+			std::cout << WIDTH(widthBuffer) << tmp->top() << " ";
+			std::cout << (char)186;                                 // ║
+			std::cout << std::endl;
+
+			list->push(tmp->top());
+			tmp->pop();
+		}while(!tmp->isEmpty());
+
+		std::cout << (char)200 << (char)205 << WIDTH(widthBuffer);  // ╚═
+		std::cout << (char)205 << (char)188 << std::endl;                        // ═╝
 	}
 }
 

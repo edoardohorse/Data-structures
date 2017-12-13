@@ -27,19 +27,19 @@ namespace NListCursorTest {
 		bool isEmpty();
 
 		// Get first position of the list
-		Position first() const;
+		Position first();
 
 		// Check if a given position is the last of the list
-		bool isLast(Position) const;
+		bool isLast(Position);
 
 		// Return a cursor pointing to the next position of a given Node position
-		Position next(Position) const;
+		Position next(Position);
 
 		// Return the position of Node that has as next Node the given one
 		Position previous(Position);
 
 		// Return the value of a Node
-		TypeElem get(Position) const;
+		TypeElem get(Position);
 
 		// Set a value of a Node
 		void set(Position, TypeElem);
@@ -75,44 +75,44 @@ namespace NListCursorTest {
 
 
 	template<typename TypeElem>
-	ListCursor<TypeElem>::ListCursor() {
+	ListCursor<TypeElem>::ListCursor(){
 		l = 0;
 		init();
 	}
 
 	template<typename TypeElem>
-	ListCursor<TypeElem>::~ListCursor() {}
+	ListCursor<TypeElem>::~ListCursor(){}
 
 	template<typename TypeElem>
-	bool ListCursor<TypeElem>::isEmpty() { return l == 0; }
+	bool ListCursor<TypeElem>::isEmpty(){ return l == 0; }
 
 	template<typename TypeElem>
-	Position ListCursor<TypeElem>::first() const { return space.v[0].next; }
+	Position ListCursor<TypeElem>::first(){ return space.v[0].next; }
 
 	template<typename TypeElem>
-	bool ListCursor<TypeElem>::isLast(Position p) const { return space.v[p].next == 0; }
+	bool ListCursor<TypeElem>::isLast(Position p){ return space.v[p].next == 0; }
 
 	template<typename TypeElem>
-	Position ListCursor<TypeElem>::next(Position p) const { return space.v[p].next; }
+	Position ListCursor<TypeElem>::next(Position p){ return space.v[p].next; }
 
 	template<typename TypeElem>
-	Position ListCursor<TypeElem>::previous(Position p) {
+	Position ListCursor<TypeElem>::previous(Position p){
 		Position tmp = first();
-		while (next(tmp) != p) {
+		while (next(tmp) != p){
 			tmp = next(tmp);
 		}
 		return tmp;
 	}
 
 	template<typename TypeElem>
-	TypeElem ListCursor<TypeElem>::get(Position p) const { return space.v[p].value; }
+	TypeElem ListCursor<TypeElem>::get(Position p){ return space.v[p].value; }
 
 	template<typename TypeElem>
-	void ListCursor<TypeElem>::set(Position p, TypeElem e) { space.v[p].value = e; }
+	void ListCursor<TypeElem>::set(Position p, TypeElem e){ space.v[p].value = e; }
 
 	template<typename TypeElem>
-	void ListCursor<TypeElem>::insert(Position& p, TypeElem e) {
-		if (space.free == 0) {
+	void ListCursor<TypeElem>::insert(Position& p, TypeElem e){
+		if (space.free == 0){
 			throw std::invalid_argument("Overflow of list dimension");
 		} else {
 			move(space.free, space.v[p].next);
@@ -121,7 +121,7 @@ namespace NListCursorTest {
 	}
 
 	template<typename TypeElem>
-	void ListCursor<TypeElem>::remove(Position& p) {
+	void ListCursor<TypeElem>::remove(Position& p){
 		Position tmp = space.v[p].next;
 		space.v[previous(p)].next = space.v[p].next;
 
@@ -135,7 +135,7 @@ namespace NListCursorTest {
 	}
 
 	template<typename TypeElem>
-	void ListCursor<TypeElem>::init() {
+	void ListCursor<TypeElem>::init(){
 		space.free = 1;
 		space.v[0].next = 0;
 
@@ -143,7 +143,7 @@ namespace NListCursorTest {
 				space.v[0].value = (TypeElem) NULL;
 
 		#endif
-		for (int i = 1; i < MAXLENGTH; i++) {
+		for (int i = 1; i < MAXLENGTH; i++){
 
 		#ifdef DEBUG_
 					space.v[i].value = (TypeElem) NULL;
@@ -159,7 +159,7 @@ namespace NListCursorTest {
 	}
 
 	template<typename TypeElem>
-	void ListCursor<TypeElem>::move(Position& free, Position& toMove) {
+	void ListCursor<TypeElem>::move(Position& free, Position& toMove){
 		Position tmp = toMove;
 		toMove = free;
 		free = space.v[free].next;

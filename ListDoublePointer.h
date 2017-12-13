@@ -5,12 +5,12 @@ namespace NListDoublePointer{
     template<typename TypeElem>
     class Node{
     public:
-        TypeElem getValue() const {return value;}
-        void setValue(TypeElem value) {Node::value = value;}
-        Node* getNext() const {return next;}
-        void setNext(Node* next) {Node::next = next;}
-        Node* getPrevious() const {return previous;}
-        void setPrevious(Node* previous) {Node::previous = previous;}
+        TypeElem getValue(){return value;}
+        void setValue(TypeElem value){Node::value = value;}
+        Node* getNext(){return next;}
+        void setNext(Node* next){Node::next = next;}
+        Node* getPrevious(){return previous;}
+        void setPrevious(Node* previous){Node::previous = previous;}
 
     private:
         TypeElem value;
@@ -29,17 +29,17 @@ namespace NListDoublePointer{
 
         ~ListDoublePointer();
 
-        bool isEmpty() const;
+        bool isEmpty();
 
-        Position<TypeElem> first() const;
+        Position<TypeElem> first();
 
-        bool isLast(Position<TypeElem>) const;
+        bool isLast(Position<TypeElem>);
 
-        Position<TypeElem> next(Position<TypeElem>) const;
+        Position<TypeElem> next(Position<TypeElem>);
 
-        Position<TypeElem> previous(Position<TypeElem>) const;
+        Position<TypeElem> previous(Position<TypeElem>);
 
-        TypeElem get(Position<TypeElem>) const;
+        TypeElem get(Position<TypeElem>);
 
         void set(Position<TypeElem>, TypeElem);
 
@@ -54,14 +54,14 @@ namespace NListDoublePointer{
     };
 
     template<typename TypeElem>
-    ListDoublePointer<TypeElem>::ListDoublePointer() {
+    ListDoublePointer<TypeElem>::ListDoublePointer(){
         ls = new Node<TypeElem>;
         ls->setNext(nullptr);
         ls->setPrevious(nullptr);
     }
 
     template<typename TypeElem>
-    ListDoublePointer<TypeElem>::~ListDoublePointer() {
+    ListDoublePointer<TypeElem>::~ListDoublePointer(){
         Position<TypeElem> tmp = first();
         while(!isLast(tmp)){
             Position<TypeElem> p = tmp;
@@ -72,42 +72,42 @@ namespace NListDoublePointer{
     }
 
     template<typename TypeElem>
-    bool ListDoublePointer<TypeElem>::isEmpty() const{
+    bool ListDoublePointer<TypeElem>::isEmpty(){
         return (ls->getNext() == nullptr);
     }
 
     template<typename TypeElem>
-    Position<TypeElem> ListDoublePointer<TypeElem>::first() const{
+    Position<TypeElem> ListDoublePointer<TypeElem>::first(){
         return ls->getNext();
     }
 
     template<typename TypeElem>
-    bool ListDoublePointer<TypeElem>::isLast(Position<TypeElem> p) const{
+    bool ListDoublePointer<TypeElem>::isLast(Position<TypeElem> p){
         return (p == nullptr);
     }
 
     template<typename TypeElem>
-    Position<TypeElem> ListDoublePointer<TypeElem>::next(Position<TypeElem> p) const{
+    Position<TypeElem> ListDoublePointer<TypeElem>::next(Position<TypeElem> p){
         return p->getNext();
     }
 
     template<typename TypeElem>
-    Position<TypeElem> ListDoublePointer<TypeElem>::previous(Position<TypeElem> p) const{
+    Position<TypeElem> ListDoublePointer<TypeElem>::previous(Position<TypeElem> p){
         return p->getPrevious();
     }
 
     template<typename TypeElem>
-    TypeElem ListDoublePointer<TypeElem>::get(Position<TypeElem> p) const{
+    TypeElem ListDoublePointer<TypeElem>::get(Position<TypeElem> p){
         return p->getValue();
     }
 
     template<typename TypeElem>
-    void ListDoublePointer<TypeElem>::set(Position<TypeElem> p, TypeElem e) {
+    void ListDoublePointer<TypeElem>::set(Position<TypeElem> p, TypeElem e){
         p->setValue(e);
     }
 
     template<typename TypeElem>
-    void ListDoublePointer<TypeElem>::insert(Position<TypeElem>& p, TypeElem e) {
+    void ListDoublePointer<TypeElem>::insert(Position<TypeElem>& p, TypeElem e){
         Position<TypeElem> newNode = new Node<TypeElem>;
         newNode->setValue(e);
         newNode->setNext(p);
@@ -120,8 +120,8 @@ namespace NListDoublePointer{
         }
         else{
             Position<TypeElem> tmp = first();
-            if(p == nullptr) {
-                while (next(tmp) != p) {
+            if(p == nullptr){
+                while (next(tmp) != p){
                     tmp = next(tmp);
                 }
             }
@@ -136,7 +136,7 @@ namespace NListDoublePointer{
     }
 
     template<typename TypeElem>
-    void ListDoublePointer<TypeElem>::remove(Position<TypeElem>& p) {
+    void ListDoublePointer<TypeElem>::remove(Position<TypeElem>& p){
         Position<TypeElem> toRemove = p;
 
         if(ls->getNext() == toRemove){

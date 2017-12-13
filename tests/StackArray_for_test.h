@@ -9,9 +9,9 @@ namespace NStackArrayTest{
 	class StackArray{
 	public:
 		StackArray();
-		bool isEmpty() ;
+		bool isEmpty();
 		void push(TypeElem);
-		TypeElem top() ;
+		TypeElem top();
 		void pop();
 
 	private:
@@ -22,28 +22,28 @@ namespace NStackArrayTest{
 	};
 
 	template<typename TypeElem>
-	StackArray<TypeElem>::StackArray() {
+	StackArray<TypeElem>::StackArray(){
 		stk.head = 0;
 	}
 
 	template<typename TypeElem>
-	bool StackArray<TypeElem>::isEmpty()  {
+	bool StackArray<TypeElem>::isEmpty(){
 		return stk.head == 0;
 	}
 
 	template<typename TypeElem>
-	void StackArray<TypeElem>::push(TypeElem e) {
+	void StackArray<TypeElem>::push(TypeElem e){
 		stk.head++;
 		stk.v[ stk.head ] = e;
 	}
 
 	template<typename TypeElem>
-	TypeElem StackArray<TypeElem>::top() {
+	TypeElem StackArray<TypeElem>::top(){
 		return stk.v[ stk.head ];
 	}
 
 	template<typename TypeElem>
-	void StackArray<TypeElem>::pop() {
+	void StackArray<TypeElem>::pop(){
 		stk.head--;
 	}
 }
