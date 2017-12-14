@@ -11,6 +11,7 @@
 #include "ListCircular.h"
 #include "StackArray.h"
 #include "StackPointer.h"
+#include "QueueArray.h"
 
 #define WIDTH(x) std::setw(x)
 
@@ -312,8 +313,9 @@ namespace PrintList{
 		std::cout << (char)205 << (char)187;                        // ═╗
 		std::cout << std::endl;
 
+		int i=0;
 		do{
-
+			std::cout << WIDTH(widthBuffer) << i++;
 			std::cout << (char)186;                                 // ║
 			std::cout << WIDTH(widthBuffer) << tmp->top() << " ";
 			std::cout << (char)186;                                 // ║
@@ -340,8 +342,37 @@ namespace PrintList{
 		std::cout << (char)205 << (char)187;                        // ═╗
 		std::cout << std::endl;
 
+		int i=0;
 		do{
+			std::cout << WIDTH(widthBuffer) << i++;
+			std::cout << (char)186;                                 // ║
+			std::cout << WIDTH(widthBuffer) << tmp->top() << " ";
+			std::cout << (char)186;                                 // ║
+			std::cout << std::endl;
 
+			list->push(tmp->top());
+			tmp->pop();
+		}while(!tmp->isEmpty());
+
+		std::cout << (char)200 << (char)205 << WIDTH(widthBuffer);  // ╚═
+		std::cout << (char)205 << (char)188 << std::endl;                        // ═╝
+	}
+
+	template<typename TypeElem>
+	void printQueueArray(NQueueArray::QueueArray<TypeElem>* list, int widthBuffer = 5){
+		auto tmp = new NQueueArray::QueueArray<TypeElem>;
+		while(!list->isEmpty()){
+			tmp->push(list->top());
+			list->pop();
+		}
+
+		std::cout << std::endl;
+		std::cout << (char)201 << (char)205 << WIDTH(widthBuffer);  // ╔═
+		std::cout << (char)205 << (char)187;                        // ═╗
+		std::cout << std::endl;
+		int i=0;
+		do{
+			std::cout << WIDTH(widthBuffer) << i++;
 			std::cout << (char)186;                                 // ║
 			std::cout << WIDTH(widthBuffer) << tmp->top() << " ";
 			std::cout << (char)186;                                 // ║
