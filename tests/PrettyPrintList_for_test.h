@@ -10,6 +10,7 @@
 #include "ListDoublePointer_for_test.h"
 #include "ListCircular_for_test.h"
 #include "StackArray_for_test.h"
+#include "StackPointer_for_test.h"
 
 #define WIDTH(x) std::setw(x)
 
@@ -301,6 +302,34 @@ namespace PrintList{
 	template<typename TypeElem>
 	void printStackArray(NStackArrayTest::StackArray<TypeElem>* list, int widthBuffer = 5){
 		auto tmp = new NStackArrayTest::StackArray<TypeElem>;
+		while(!list->isEmpty()){
+			tmp->push(list->top());
+			list->pop();
+		}
+
+		std::cout << std::endl;
+		std::cout << (char)201 << (char)205 << WIDTH(widthBuffer);  // ╔═
+		std::cout << (char)205 << (char)187;                        // ═╗
+		std::cout << std::endl;
+
+		do{
+
+			std::cout << (char)186;                                 // ║
+			std::cout << WIDTH(widthBuffer) << tmp->top() << " ";
+			std::cout << (char)186;                                 // ║
+			std::cout << std::endl;
+
+			list->push(tmp->top());
+			tmp->pop();
+		}while(!tmp->isEmpty());
+
+		std::cout << (char)200 << (char)205 << WIDTH(widthBuffer);  // ╚═
+		std::cout << (char)205 << (char)188 << std::endl;                        // ═╝
+	}
+
+	template<typename TypeElem>
+	void printStackPointer(NStackPointerTest::StackPointer<TypeElem>* list, int widthBuffer = 5){
+		auto tmp = new NStackPointerTest::StackPointer<TypeElem>;
 		while(!list->isEmpty()){
 			tmp->push(list->top());
 			list->pop();
