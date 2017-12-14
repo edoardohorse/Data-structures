@@ -32,8 +32,8 @@ add_executable(Test_LCU ${TEST_LIST_CURSOR} tests/test_main.cpp)
 add_executable(Test_LP ${TEST_LIST_POINTER} tests/test_main.cpp)
 add_executable(Test_LDP ${TEST_LIST_DOUBLE_POINTER} tests/test_main.cpp)
 add_executable(Test_LCI ${TEST_LIST_CIRCULAR} tests/test_main.cpp)
-add_executable(Test_STKA ${TEST_STACK} tests/test_main.cpp)
-add_executable(Test_STKP ${TEST_STACK} tests/test_main.cpp)
+add_executable(Test_STKA ${TEST_STACK_ARRAY} tests/test_main.cpp)
+add_executable(Test_STKP ${TEST_STACK_POINTER} tests/test_main.cpp)
 
 
 target_link_libraries(Test_LA gtest gtest_main)
