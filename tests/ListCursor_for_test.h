@@ -15,8 +15,6 @@ namespace NListCursorTest {
 	class ListCursor {
 	public:
 
-
-
 		// Initialize the list to 0 and set all the cursors to theirs next position
 		ListCursor();
 
@@ -54,8 +52,6 @@ namespace NListCursorTest {
 
 		typedef Position List;
 
-		List l;
-
 		struct Node {
 			TypeElem value;
 			Position next;
@@ -76,7 +72,6 @@ namespace NListCursorTest {
 
 	template<typename TypeElem>
 	ListCursor<TypeElem>::ListCursor(){
-		l = 0;
 		init();
 	}
 
@@ -84,13 +79,13 @@ namespace NListCursorTest {
 	ListCursor<TypeElem>::~ListCursor(){}
 
 	template<typename TypeElem>
-	bool ListCursor<TypeElem>::isEmpty(){ return l == 0; }
+	bool ListCursor<TypeElem>::isEmpty(){ return space.free == 1; }
 
 	template<typename TypeElem>
 	Position ListCursor<TypeElem>::first(){ return space.v[0].next; }
 
 	template<typename TypeElem>
-	bool ListCursor<TypeElem>::isLast(Position p){ return space.v[p].next == 0; }
+	bool ListCursor<TypeElem>::isLast(Position p){ return p == 0; }
 
 	template<typename TypeElem>
 	Position ListCursor<TypeElem>::next(Position p){ return space.v[p].next; }
@@ -115,6 +110,7 @@ namespace NListCursorTest {
 		if (space.free == 0){
 			throw std::invalid_argument("Overflow of list dimension");
 		} else {
+
 			move(space.free, space.v[p].next);
 			space.v[space.v[p].next].value = e;
 		}
