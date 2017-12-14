@@ -50,7 +50,7 @@ namespace PrintList{
 		std::cout << std::endl;
 
 		do{
-			std::cout << WIDTH(2) << i;
+			std::cout << WIDTH(4) << i;
 			std::cout << (char)186;                                 // ║
 			std::cout << WIDTH(widthBuffer) << list->get(i) << " ";
 			std::cout << (char)124 ;                        // |
@@ -59,8 +59,8 @@ namespace PrintList{
 			std::cout << std::endl;
 
 
-		}while(!list->isLast(i++));
-		std::cout << "  ";
+		}while(!list->isLast(i = list->next(i)));
+
 		std::cout << (char)200 << (char)205 << WIDTH(widthBuffer);  // ╚═
 		std::cout << std::string(7, (char)205);
 		std::cout << (char)205 << (char)188;                        // ═╝
