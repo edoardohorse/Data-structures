@@ -11,7 +11,8 @@ include_directories(lib/googlemock/include)
 
 
 set(SOURCE_FILES main.cpp PrettyPrintList.h ListArray.h ListCursor.h
-        ListPointer.h ListDoublePointer.h ListCircular.h StackArray.h QueueArray.h QueuePointer.h)
+        ListPointer.h ListDoublePointer.h ListCircular.h StackArray.h
+        StackPointer.h QueueArray.h QueuePointer.h)
 
 add_executable(Data_structures ${SOURCE_FILES})
 
