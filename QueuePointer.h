@@ -29,15 +29,15 @@ namespace NQueuePointer{
 	private:
 
 		struct {
-			Node<TypeElem> head;
-			Node<TypeElem> tail;
+			Node<TypeElem>* head;
+			Node<TypeElem>* tail;
 		}queue;
 	};
 
 	template<typename TypeElem>
 	QueuePointer<TypeElem>::QueuePointer() {
-		queue.head.setNext(nullptr);
-		queue.tail.setNext(nullptr);
+		queue.head = nullptr;
+		queue.tail = nullptr;
 	}
 
 	template<typename TypeElem>
@@ -49,37 +49,37 @@ namespace NQueuePointer{
 
 	template<typename TypeElem>
 	bool QueuePointer<TypeElem>::isEmpty() {
-		return queue.head.getNext() == nullptr;
+		return queue.head == nullptr;
 	}
 
 	template<typename TypeElem>
 	void QueuePointer<TypeElem>::pop() {
-		Node<TypeElem>* toRemove = queue.head.getNext();
-		queue.head.setNext( toRemove->getNext() );
+		Node<TypeElem>* toRemove = queue.head;
+		queue.head = queue.head->getNext();
 		if(isEmpty())
-			queue.tail.setNext(nullptr);
+			queue.tail = nullptr;
 		delete toRemove;
 	}
 
 	template<typename TypeElem>
 	TypeElem QueuePointer<TypeElem>::top() {
-		return queue.head.getNext()->getValue();
+		return queue.head->getValue();
 	}
 
 	template<typename TypeElem>
 	void QueuePointer<TypeElem>::push(TypeElem e) {
 		auto newNode = new Node<TypeElem>;
 		newNode->setValue(e);
-		if(queue.head.getNext() == nullptr){
-			queue.head.setNext(newNode);
-			newNode->setNext(queue.tail.getNext());
+		if(queue.head == nullptr){
+			queue.head = newNode;
+			newNode->setNext(queue.tail);
 		}
 		else{
-			newNode->setNext(queue.tail.getNext()->getNext());
-			queue.tail.getNext()->setNext(newNode);
+			newNode->setNext(queue.tail->getNext());
+			queue.tail->setNext(newNode);
 		}
 
-		queue.tail.setNext( newNode);
+		queue.tail = newNode;
 
 	}
 
