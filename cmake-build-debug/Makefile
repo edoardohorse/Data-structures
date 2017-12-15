@@ -240,6 +240,19 @@ Test_LDP/fast:
 .PHONY : Test_LDP/fast
 
 #=============================================================================
+# Target rules for targets named Test_SET
+
+# Build rule for target.
+Test_SET: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 Test_SET
+.PHONY : Test_SET
+
+# fast build rule for target.
+Test_SET/fast:
+	$(MAKE) -f CMakeFiles\Test_SET.dir\build.make CMakeFiles/Test_SET.dir/build
+.PHONY : Test_SET/fast
+
+#=============================================================================
 # Target rules for targets named gtest
 
 # Build rule for target.
@@ -481,6 +494,33 @@ tests/test_QueuePointer.cpp.s:
 	$(MAKE) -f CMakeFiles\Test_QUEP.dir\build.make CMakeFiles/Test_QUEP.dir/tests/test_QueuePointer.cpp.s
 .PHONY : tests/test_QueuePointer.cpp.s
 
+tests/test_Set.obj: tests/test_Set.cpp.obj
+
+.PHONY : tests/test_Set.obj
+
+# target to build an object file
+tests/test_Set.cpp.obj:
+	$(MAKE) -f CMakeFiles\Test_SET.dir\build.make CMakeFiles/Test_SET.dir/tests/test_Set.cpp.obj
+.PHONY : tests/test_Set.cpp.obj
+
+tests/test_Set.i: tests/test_Set.cpp.i
+
+.PHONY : tests/test_Set.i
+
+# target to preprocess a source file
+tests/test_Set.cpp.i:
+	$(MAKE) -f CMakeFiles\Test_SET.dir\build.make CMakeFiles/Test_SET.dir/tests/test_Set.cpp.i
+.PHONY : tests/test_Set.cpp.i
+
+tests/test_Set.s: tests/test_Set.cpp.s
+
+.PHONY : tests/test_Set.s
+
+# target to generate assembly for a file
+tests/test_Set.cpp.s:
+	$(MAKE) -f CMakeFiles\Test_SET.dir\build.make CMakeFiles/Test_SET.dir/tests/test_Set.cpp.s
+.PHONY : tests/test_Set.cpp.s
+
 tests/test_StackArray.obj: tests/test_StackArray.cpp.obj
 
 .PHONY : tests/test_StackArray.obj
@@ -550,6 +590,7 @@ tests/test_main.cpp.obj:
 	$(MAKE) -f CMakeFiles\Test_STKP.dir\build.make CMakeFiles/Test_STKP.dir/tests/test_main.cpp.obj
 	$(MAKE) -f CMakeFiles\Test_QUEA.dir\build.make CMakeFiles/Test_QUEA.dir/tests/test_main.cpp.obj
 	$(MAKE) -f CMakeFiles\Test_LDP.dir\build.make CMakeFiles/Test_LDP.dir/tests/test_main.cpp.obj
+	$(MAKE) -f CMakeFiles\Test_SET.dir\build.make CMakeFiles/Test_SET.dir/tests/test_main.cpp.obj
 .PHONY : tests/test_main.cpp.obj
 
 tests/test_main.i: tests/test_main.cpp.i
@@ -567,6 +608,7 @@ tests/test_main.cpp.i:
 	$(MAKE) -f CMakeFiles\Test_STKP.dir\build.make CMakeFiles/Test_STKP.dir/tests/test_main.cpp.i
 	$(MAKE) -f CMakeFiles\Test_QUEA.dir\build.make CMakeFiles/Test_QUEA.dir/tests/test_main.cpp.i
 	$(MAKE) -f CMakeFiles\Test_LDP.dir\build.make CMakeFiles/Test_LDP.dir/tests/test_main.cpp.i
+	$(MAKE) -f CMakeFiles\Test_SET.dir\build.make CMakeFiles/Test_SET.dir/tests/test_main.cpp.i
 .PHONY : tests/test_main.cpp.i
 
 tests/test_main.s: tests/test_main.cpp.s
@@ -584,6 +626,7 @@ tests/test_main.cpp.s:
 	$(MAKE) -f CMakeFiles\Test_STKP.dir\build.make CMakeFiles/Test_STKP.dir/tests/test_main.cpp.s
 	$(MAKE) -f CMakeFiles\Test_QUEA.dir\build.make CMakeFiles/Test_QUEA.dir/tests/test_main.cpp.s
 	$(MAKE) -f CMakeFiles\Test_LDP.dir\build.make CMakeFiles/Test_LDP.dir/tests/test_main.cpp.s
+	$(MAKE) -f CMakeFiles\Test_SET.dir\build.make CMakeFiles/Test_SET.dir/tests/test_main.cpp.s
 .PHONY : tests/test_main.cpp.s
 
 # Help Target
@@ -602,6 +645,7 @@ help:
 	@echo ... Test_STKP
 	@echo ... Test_QUEA
 	@echo ... Test_LDP
+	@echo ... Test_SET
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... gtest
@@ -630,6 +674,9 @@ help:
 	@echo ... tests/test_QueuePointer.obj
 	@echo ... tests/test_QueuePointer.i
 	@echo ... tests/test_QueuePointer.s
+	@echo ... tests/test_Set.obj
+	@echo ... tests/test_Set.i
+	@echo ... tests/test_Set.s
 	@echo ... tests/test_StackArray.obj
 	@echo ... tests/test_StackArray.i
 	@echo ... tests/test_StackArray.s

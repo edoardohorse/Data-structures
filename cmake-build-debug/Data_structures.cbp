@@ -497,6 +497,54 @@
 					<DistClean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="Test_SET">
+				<Option output="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Test_SET.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googletest/include"/>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googlemock/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 Test_SET"/>
+					<CompileFile command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Test_SET/fast">
+				<Option output="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Test_SET.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googletest/include"/>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googlemock/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 Test_SET/fast"/>
+					<CompileFile command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug"/>
 				<Option type="4"/>
@@ -638,6 +686,9 @@
 		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/QueuePointer.h">
 			<Option target="Data_structures"/>
 		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/Set.h">
+			<Option target="Data_structures"/>
+		</Unit>
 		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/StackArray.h">
 			<Option target="Data_structures"/>
 		</Unit>
@@ -678,12 +729,16 @@
 			<Option target="Test_STKP"/>
 			<Option target="Test_QUEA"/>
 			<Option target="Test_LDP"/>
+			<Option target="Test_SET"/>
 		</Unit>
 		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/tests/QueueArray_for_test.h">
 			<Option target="Test_QUEA"/>
 		</Unit>
 		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/tests/QueuePointer_for_test.h">
 			<Option target="Test_QUEP"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/tests/Set_for_test.h">
+			<Option target="Test_SET"/>
 		</Unit>
 		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/tests/StackArray_for_test.h">
 			<Option target="Test_STKA"/>
@@ -712,6 +767,9 @@
 		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/tests/test_QueuePointer.cpp">
 			<Option target="Test_QUEP"/>
 		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/tests/test_Set.cpp">
+			<Option target="Test_SET"/>
+		</Unit>
 		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/tests/test_StackArray.cpp">
 			<Option target="Test_STKA"/>
 		</Unit>
@@ -728,6 +786,7 @@
 			<Option target="Test_STKP"/>
 			<Option target="Test_QUEA"/>
 			<Option target="Test_LDP"/>
+			<Option target="Test_SET"/>
 		</Unit>
 		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

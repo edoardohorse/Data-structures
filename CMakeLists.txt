@@ -28,7 +28,7 @@ set(TEST_STACK_ARRAY ${TEST_COMMONS} tests/test_StackArray.cpp tests/StackArray_
 set(TEST_STACK_POINTER ${TEST_COMMONS} tests/test_StackPointer.cpp tests/StackPointer_for_test.h)
 set(TEST_QUEUE_ARRAY ${TEST_COMMONS} tests/test_QueueArray.cpp tests/QueueArray_for_test.h)
 set(TEST_QUEUE_POINTER ${TEST_COMMONS} tests/test_QueuePointer.cpp tests/QueuePointer_for_test.h)
-set(TEST_SET_ARRAY ${TEST_COMMONS} tests/test_Set.cpp tests/test_Set.cpp)
+set(TEST_SET_ARRAY ${TEST_COMMONS} tests/test_Set.cpp tests/Set_for_test.h)
 
 
 
