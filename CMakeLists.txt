@@ -12,7 +12,7 @@ include_directories(lib/googlemock/include)
 
 set(SOURCE_FILES main.cpp PrettyPrintList.h ListArray.h ListCursor.h
         ListPointer.h ListDoublePointer.h ListCircular.h StackArray.h
-        StackPointer.h QueueArray.h QueuePointer.h)
+        StackPointer.h QueueArray.h QueuePointer.h Set.h)
 
 add_executable(Data_structures ${SOURCE_FILES})
 
@@ -28,6 +28,8 @@ set(TEST_STACK_ARRAY ${TEST_COMMONS} tests/test_StackArray.cpp tests/StackArray_
 set(TEST_STACK_POINTER ${TEST_COMMONS} tests/test_StackPointer.cpp tests/StackPointer_for_test.h)
 set(TEST_QUEUE_ARRAY ${TEST_COMMONS} tests/test_QueueArray.cpp tests/QueueArray_for_test.h)
 set(TEST_QUEUE_POINTER ${TEST_COMMONS} tests/test_QueuePointer.cpp tests/QueuePointer_for_test.h)
+set(TEST_SET_ARRAY ${TEST_COMMONS} tests/test_Set.cpp tests/test_Set.cpp)
+
 
 
 add_executable(Test_LA ${TEST_LIST_ARRAY} tests/test_main.cpp)
@@ -39,6 +41,7 @@ add_executable(Test_STKA ${TEST_STACK_ARRAY} tests/test_main.cpp)
 add_executable(Test_STKP ${TEST_STACK_POINTER} tests/test_main.cpp)
 add_executable(Test_QUEA ${TEST_QUEUE_ARRAY} tests/test_main.cpp)
 add_executable(Test_QUEP ${TEST_QUEUE_POINTER} tests/test_main.cpp)
+add_executable(Test_SET ${TEST_SET_ARRAY} tests/test_main.cpp)
 
 
 target_link_libraries(Test_LA gtest gtest_main)
@@ -50,3 +53,4 @@ target_link_libraries(Test_STKA gtest gtest_main)
 target_link_libraries(Test_STKP gtest gtest_main)
 target_link_libraries(Test_QUEA gtest gtest_main)
 target_link_libraries(Test_QUEP gtest gtest_main)
+target_link_libraries(Test_SET gtest gtest_main)
