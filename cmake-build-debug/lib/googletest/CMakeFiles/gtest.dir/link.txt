@@ -1,0 +1,2 @@
+C:\Mingw\bin\ar.exe qc libgtestd.a  CMakeFiles/gtest.dir/src/gtest-all.cc.obj
+C:\Mingw\bin\ranlib.exe libgtestd.a

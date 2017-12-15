@@ -1,0 +1,16 @@
+C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/CMakeFiles/Data_structures.dir
+C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/CMakeFiles/Test_QUEP.dir
+C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/CMakeFiles/Test_LA.dir
+C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/CMakeFiles/Test_STKA.dir
+C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/CMakeFiles/Test_LCU.dir
+C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/CMakeFiles/Test_LP.dir
+C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/CMakeFiles/Test_LCI.dir
+C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/CMakeFiles/Test_STKP.dir
+C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/CMakeFiles/Test_QUEA.dir
+C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/CMakeFiles/Test_LDP.dir
+C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/lib/googletest/CMakeFiles/gtest.dir
+C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/lib/googletest/CMakeFiles/gtest_main.dir
+C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/lib/googletest/CMakeFiles/edit_cache.dir
+C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/lib/googletest/CMakeFiles/rebuild_cache.dir

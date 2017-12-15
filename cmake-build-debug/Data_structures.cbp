@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Data_structures"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\lib\;CMake Files\lib\googletest\;CMake Files\lib\googletest\cmake\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Data_structures">
+				<Option output="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Data_structures.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googletest/include"/>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googlemock/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 Data_structures"/>
+					<CompileFile command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Data_structures/fast">
+				<Option output="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Data_structures.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googletest/include"/>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googlemock/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 Data_structures/fast"/>
+					<CompileFile command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Test_QUEP">
+				<Option output="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Test_QUEP.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googletest/include"/>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googlemock/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 Test_QUEP"/>
+					<CompileFile command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Test_QUEP/fast">
+				<Option output="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Test_QUEP.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googletest/include"/>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googlemock/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 Test_QUEP/fast"/>
+					<CompileFile command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Test_LA">
+				<Option output="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Test_LA.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googletest/include"/>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googlemock/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 Test_LA"/>
+					<CompileFile command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Test_LA/fast">
+				<Option output="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Test_LA.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googletest/include"/>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googlemock/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 Test_LA/fast"/>
+					<CompileFile command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Test_STKA">
+				<Option output="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Test_STKA.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googletest/include"/>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googlemock/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 Test_STKA"/>
+					<CompileFile command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Test_STKA/fast">
+				<Option output="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Test_STKA.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googletest/include"/>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googlemock/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 Test_STKA/fast"/>
+					<CompileFile command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Test_LCU">
+				<Option output="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Test_LCU.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googletest/include"/>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googlemock/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 Test_LCU"/>
+					<CompileFile command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Test_LCU/fast">
+				<Option output="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Test_LCU.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googletest/include"/>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googlemock/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 Test_LCU/fast"/>
+					<CompileFile command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Test_LP">
+				<Option output="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Test_LP.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googletest/include"/>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googlemock/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 Test_LP"/>
+					<CompileFile command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Test_LP/fast">
+				<Option output="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Test_LP.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googletest/include"/>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googlemock/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 Test_LP/fast"/>
+					<CompileFile command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Test_LCI">
+				<Option output="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Test_LCI.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googletest/include"/>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googlemock/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 Test_LCI"/>
+					<CompileFile command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Test_LCI/fast">
+				<Option output="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Test_LCI.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googletest/include"/>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googlemock/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 Test_LCI/fast"/>
+					<CompileFile command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Test_STKP">
+				<Option output="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Test_STKP.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googletest/include"/>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googlemock/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 Test_STKP"/>
+					<CompileFile command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Test_STKP/fast">
+				<Option output="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Test_STKP.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googletest/include"/>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googlemock/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 Test_STKP/fast"/>
+					<CompileFile command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Test_QUEA">
+				<Option output="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Test_QUEA.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googletest/include"/>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googlemock/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 Test_QUEA"/>
+					<CompileFile command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Test_QUEA/fast">
+				<Option output="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Test_QUEA.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googletest/include"/>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googlemock/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 Test_QUEA/fast"/>
+					<CompileFile command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Test_LDP">
+				<Option output="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Test_LDP.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googletest/include"/>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googlemock/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 Test_LDP"/>
+					<CompileFile command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Test_LDP/fast">
+				<Option output="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Test_LDP.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googletest/include"/>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googlemock/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 Test_LDP/fast"/>
+					<CompileFile command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest">
+				<Option output="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/lib/googletest/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/lib/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googletest/include"/>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googletest"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/lib/googletest/Makefile&quot;  VERBOSE=1 gtest"/>
+					<CompileFile command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest/fast">
+				<Option output="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/lib/googletest/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/lib/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googletest/include"/>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googletest"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/lib/googletest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
+					<CompileFile command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main">
+				<Option output="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/lib/googletest/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/lib/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googletest/include"/>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googletest"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main"/>
+					<CompileFile command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main/fast">
+				<Option output="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/lib/googletest/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/lib/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googletest/include"/>
+					<Add directory="C:/Users/netwo/Documents/Asd/Data-structures/lib/googletest"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
+					<CompileFile command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Mingw/bin/mingw32-make.exe -f &quot;C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/ListArray.h">
+			<Option target="Data_structures"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/ListCircular.h">
+			<Option target="Data_structures"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/ListCursor.h">
+			<Option target="Data_structures"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/ListDoublePointer.h">
+			<Option target="Data_structures"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/ListPointer.h">
+			<Option target="Data_structures"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/PrettyPrintList.h">
+			<Option target="Data_structures"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/QueueArray.h">
+			<Option target="Data_structures"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/QueuePointer.h">
+			<Option target="Data_structures"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/StackArray.h">
+			<Option target="Data_structures"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/StackPointer.h">
+			<Option target="Data_structures"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/lib/googletest/src/gtest-all.cc">
+			<Option target="gtest"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/lib/googletest/src/gtest_main.cc">
+			<Option target="gtest_main"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/main.cpp">
+			<Option target="Data_structures"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/tests/ListArray_for_test.h">
+			<Option target="Test_LA"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/tests/ListCircular_for_test.h">
+			<Option target="Test_LCI"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/tests/ListCursor_for_test.h">
+			<Option target="Test_LCU"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/tests/ListDoublePointer_for_test.h">
+			<Option target="Test_LDP"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/tests/ListPointer_for_test.h">
+			<Option target="Test_LP"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/tests/PrettyPrintList_for_test.h">
+			<Option target="Test_QUEP"/>
+			<Option target="Test_LA"/>
+			<Option target="Test_STKA"/>
+			<Option target="Test_LCU"/>
+			<Option target="Test_LP"/>
+			<Option target="Test_LCI"/>
+			<Option target="Test_STKP"/>
+			<Option target="Test_QUEA"/>
+			<Option target="Test_LDP"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/tests/QueueArray_for_test.h">
+			<Option target="Test_QUEA"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/tests/QueuePointer_for_test.h">
+			<Option target="Test_QUEP"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/tests/StackArray_for_test.h">
+			<Option target="Test_STKA"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/tests/StackPointer_for_test.h">
+			<Option target="Test_STKP"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/tests/test_ListArray.cpp">
+			<Option target="Test_LA"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/tests/test_ListCircular.cpp">
+			<Option target="Test_LCI"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/tests/test_ListCursor.cpp">
+			<Option target="Test_LCU"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/tests/test_ListDoublePointer.cpp">
+			<Option target="Test_LDP"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/tests/test_ListPointer.cpp">
+			<Option target="Test_LP"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/tests/test_QueueArray.cpp">
+			<Option target="Test_QUEA"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/tests/test_QueuePointer.cpp">
+			<Option target="Test_QUEP"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/tests/test_StackArray.cpp">
+			<Option target="Test_STKA"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/tests/test_StackPointer.cpp">
+			<Option target="Test_STKP"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/tests/test_main.cpp">
+			<Option target="Test_QUEP"/>
+			<Option target="Test_LA"/>
+			<Option target="Test_STKA"/>
+			<Option target="Test_LCU"/>
+			<Option target="Test_LP"/>
+			<Option target="Test_LCI"/>
+			<Option target="Test_STKP"/>
+			<Option target="Test_QUEA"/>
+			<Option target="Test_LDP"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/lib/googletest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\googletest\"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/lib/googletest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\googletest\"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/lib/googletest/cmake/internal_utils.cmake">
+			<Option virtualFolder="CMake Files\lib\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/netwo/Documents/Asd/Data-structures/lib/googletest/cmake/internal_utils.cmake">
+			<Option virtualFolder="CMake Files\lib\googletest\cmake\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
