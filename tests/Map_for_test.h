@@ -1,8 +1,10 @@
 #pragma once
 
+#include "Hash.h"
+
 namespace NMapTest{
 
-	template<typename TypeKey, typename TypeElem, int NBucket = 10>
+	template<typename TypeKey, typename TypeElem, const int NBucket = 10>
 	class Map{
 	public:
 
@@ -21,9 +23,18 @@ namespace NMapTest{
 
 		struct map{
 			Bucket v[NBucket];
-			Bucket operator[] (TypeKey k) const {return v[ k% NBucket];}
-			Bucket& operator[] (TypeKey k) {return v[k% NBucket];}
+			Bucket operator[] (TypeKey k) const {
+				Hash h = toHash(k, NBucket);
+				return v[h];
+			}
+			Bucket& operator[] (TypeKey k) {
+				Hash h = toHash(k, NBucket);
+				return v[h];
+			}
 		}map;
+
+
+
 
 	};
 
