@@ -30,6 +30,7 @@ set(TEST_QUEUE_ARRAY ${TEST_COMMONS} tests/test_QueueArray.cpp tests/QueueArray_
 set(TEST_QUEUE_POINTER ${TEST_COMMONS} tests/test_QueuePointer.cpp tests/QueuePointer_for_test.h)
 set(TEST_SET_ARRAY ${TEST_COMMONS} tests/test_Set.cpp tests/Set_for_test.h)
 set(TEST_MAP ${TEST_COMMONS} tests/test_Map.cpp tests/Map_for_test.h tests/Hash.h)
+set(TEST_GRAPH ${TEST_COMMONS} tests/test_Graph.cpp tests/Graph_for_test.h)
 
 
 
@@ -44,6 +45,7 @@ add_executable(Test_QUEA ${TEST_QUEUE_ARRAY} tests/test_main.cpp)
 add_executable(Test_QUEP ${TEST_QUEUE_POINTER} tests/test_main.cpp)
 add_executable(Test_SET ${TEST_SET_ARRAY} tests/test_main.cpp)
 add_executable(Test_MAP ${TEST_MAP} tests/test_main.cpp)
+add_executable(Test_GRAPH ${TEST_GRAPH} tests/test_main.cpp)
 
 
 target_link_libraries(Test_LA gtest gtest_main)
@@ -57,3 +59,4 @@ target_link_libraries(Test_QUEA gtest gtest_main)
 target_link_libraries(Test_QUEP gtest gtest_main)
 target_link_libraries(Test_SET gtest gtest_main)
 target_link_libraries(Test_MAP gtest gtest_main)
+target_link_libraries(Test_GRAPH gtest gtest_main)
