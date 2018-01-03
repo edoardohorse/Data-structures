@@ -8,8 +8,10 @@ C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/CMakeFiles/Test_L
 C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/CMakeFiles/Test_STKP.dir
 C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/CMakeFiles/Test_QUEA.dir
 C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/CMakeFiles/Test_LDP.dir
+C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/CMakeFiles/Test_DIR_GRAPH.dir
 C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/CMakeFiles/Test_SET.dir
 C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/CMakeFiles/Test_MAP.dir
 C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/lib/googletest/CMakeFiles/gtest.dir
 C:/Users/netwo/Documents/Asd/Data-structures/cmake-build-debug/lib/googletest/CMakeFiles/gtest_main.dir

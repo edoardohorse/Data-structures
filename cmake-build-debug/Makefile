@@ -38,10 +38,10 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = C:\Users\netwo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\173.3727.114\bin\cmake\bin\cmake.exe
+CMAKE_COMMAND = C:\Users\netwo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\173.4127.32\bin\cmake\bin\cmake.exe
 
 # The command to remove a file.
-RM = C:\Users\netwo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\173.3727.114\bin\cmake\bin\cmake.exe -E remove -f
+RM = C:\Users\netwo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\173.4127.32\bin\cmake\bin\cmake.exe -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -58,7 +58,7 @@ CMAKE_BINARY_DIR = C:\Users\netwo\Documents\Asd\Data-structures\cmake-build-debu
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	C:\Users\netwo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\173.3727.114\bin\cmake\bin\cmake.exe -E echo "No interactive CMake dialog available."
+	C:\Users\netwo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\173.4127.32\bin\cmake\bin\cmake.exe -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -69,7 +69,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	C:\Users\netwo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\173.3727.114\bin\cmake\bin\cmake.exe -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	C:\Users\netwo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\173.4127.32\bin\cmake\bin\cmake.exe -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -240,6 +240,19 @@ Test_LDP/fast:
 .PHONY : Test_LDP/fast
 
 #=============================================================================
+# Target rules for targets named Test_DIR_GRAPH
+
+# Build rule for target.
+Test_DIR_GRAPH: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 Test_DIR_GRAPH
+.PHONY : Test_DIR_GRAPH
+
+# fast build rule for target.
+Test_DIR_GRAPH/fast:
+	$(MAKE) -f CMakeFiles\Test_DIR_GRAPH.dir\build.make CMakeFiles/Test_DIR_GRAPH.dir/build
+.PHONY : Test_DIR_GRAPH/fast
+
+#=============================================================================
 # Target rules for targets named Test_SET
 
 # Build rule for target.
@@ -251,6 +264,19 @@ Test_SET: cmake_check_build_system
 Test_SET/fast:
 	$(MAKE) -f CMakeFiles\Test_SET.dir\build.make CMakeFiles/Test_SET.dir/build
 .PHONY : Test_SET/fast
+
+#=============================================================================
+# Target rules for targets named Test_MAP
+
+# Build rule for target.
+Test_MAP: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 Test_MAP
+.PHONY : Test_MAP
+
+# fast build rule for target.
+Test_MAP/fast:
+	$(MAKE) -f CMakeFiles\Test_MAP.dir\build.make CMakeFiles/Test_MAP.dir/build
+.PHONY : Test_MAP/fast
 
 #=============================================================================
 # Target rules for targets named gtest
@@ -304,6 +330,33 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) -f CMakeFiles\Data_structures.dir\build.make CMakeFiles/Data_structures.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+tests/test_DirectGraph.obj: tests/test_DirectGraph.cpp.obj
+
+.PHONY : tests/test_DirectGraph.obj
+
+# target to build an object file
+tests/test_DirectGraph.cpp.obj:
+	$(MAKE) -f CMakeFiles\Test_DIR_GRAPH.dir\build.make CMakeFiles/Test_DIR_GRAPH.dir/tests/test_DirectGraph.cpp.obj
+.PHONY : tests/test_DirectGraph.cpp.obj
+
+tests/test_DirectGraph.i: tests/test_DirectGraph.cpp.i
+
+.PHONY : tests/test_DirectGraph.i
+
+# target to preprocess a source file
+tests/test_DirectGraph.cpp.i:
+	$(MAKE) -f CMakeFiles\Test_DIR_GRAPH.dir\build.make CMakeFiles/Test_DIR_GRAPH.dir/tests/test_DirectGraph.cpp.i
+.PHONY : tests/test_DirectGraph.cpp.i
+
+tests/test_DirectGraph.s: tests/test_DirectGraph.cpp.s
+
+.PHONY : tests/test_DirectGraph.s
+
+# target to generate assembly for a file
+tests/test_DirectGraph.cpp.s:
+	$(MAKE) -f CMakeFiles\Test_DIR_GRAPH.dir\build.make CMakeFiles/Test_DIR_GRAPH.dir/tests/test_DirectGraph.cpp.s
+.PHONY : tests/test_DirectGraph.cpp.s
 
 tests/test_ListArray.obj: tests/test_ListArray.cpp.obj
 
@@ -439,6 +492,33 @@ tests/test_ListPointer.s: tests/test_ListPointer.cpp.s
 tests/test_ListPointer.cpp.s:
 	$(MAKE) -f CMakeFiles\Test_LP.dir\build.make CMakeFiles/Test_LP.dir/tests/test_ListPointer.cpp.s
 .PHONY : tests/test_ListPointer.cpp.s
+
+tests/test_Map.obj: tests/test_Map.cpp.obj
+
+.PHONY : tests/test_Map.obj
+
+# target to build an object file
+tests/test_Map.cpp.obj:
+	$(MAKE) -f CMakeFiles\Test_MAP.dir\build.make CMakeFiles/Test_MAP.dir/tests/test_Map.cpp.obj
+.PHONY : tests/test_Map.cpp.obj
+
+tests/test_Map.i: tests/test_Map.cpp.i
+
+.PHONY : tests/test_Map.i
+
+# target to preprocess a source file
+tests/test_Map.cpp.i:
+	$(MAKE) -f CMakeFiles\Test_MAP.dir\build.make CMakeFiles/Test_MAP.dir/tests/test_Map.cpp.i
+.PHONY : tests/test_Map.cpp.i
+
+tests/test_Map.s: tests/test_Map.cpp.s
+
+.PHONY : tests/test_Map.s
+
+# target to generate assembly for a file
+tests/test_Map.cpp.s:
+	$(MAKE) -f CMakeFiles\Test_MAP.dir\build.make CMakeFiles/Test_MAP.dir/tests/test_Map.cpp.s
+.PHONY : tests/test_Map.cpp.s
 
 tests/test_QueueArray.obj: tests/test_QueueArray.cpp.obj
 
@@ -590,7 +670,9 @@ tests/test_main.cpp.obj:
 	$(MAKE) -f CMakeFiles\Test_STKP.dir\build.make CMakeFiles/Test_STKP.dir/tests/test_main.cpp.obj
 	$(MAKE) -f CMakeFiles\Test_QUEA.dir\build.make CMakeFiles/Test_QUEA.dir/tests/test_main.cpp.obj
 	$(MAKE) -f CMakeFiles\Test_LDP.dir\build.make CMakeFiles/Test_LDP.dir/tests/test_main.cpp.obj
+	$(MAKE) -f CMakeFiles\Test_DIR_GRAPH.dir\build.make CMakeFiles/Test_DIR_GRAPH.dir/tests/test_main.cpp.obj
 	$(MAKE) -f CMakeFiles\Test_SET.dir\build.make CMakeFiles/Test_SET.dir/tests/test_main.cpp.obj
+	$(MAKE) -f CMakeFiles\Test_MAP.dir\build.make CMakeFiles/Test_MAP.dir/tests/test_main.cpp.obj
 .PHONY : tests/test_main.cpp.obj
 
 tests/test_main.i: tests/test_main.cpp.i
@@ -608,7 +690,9 @@ tests/test_main.cpp.i:
 	$(MAKE) -f CMakeFiles\Test_STKP.dir\build.make CMakeFiles/Test_STKP.dir/tests/test_main.cpp.i
 	$(MAKE) -f CMakeFiles\Test_QUEA.dir\build.make CMakeFiles/Test_QUEA.dir/tests/test_main.cpp.i
 	$(MAKE) -f CMakeFiles\Test_LDP.dir\build.make CMakeFiles/Test_LDP.dir/tests/test_main.cpp.i
+	$(MAKE) -f CMakeFiles\Test_DIR_GRAPH.dir\build.make CMakeFiles/Test_DIR_GRAPH.dir/tests/test_main.cpp.i
 	$(MAKE) -f CMakeFiles\Test_SET.dir\build.make CMakeFiles/Test_SET.dir/tests/test_main.cpp.i
+	$(MAKE) -f CMakeFiles\Test_MAP.dir\build.make CMakeFiles/Test_MAP.dir/tests/test_main.cpp.i
 .PHONY : tests/test_main.cpp.i
 
 tests/test_main.s: tests/test_main.cpp.s
@@ -626,7 +710,9 @@ tests/test_main.cpp.s:
 	$(MAKE) -f CMakeFiles\Test_STKP.dir\build.make CMakeFiles/Test_STKP.dir/tests/test_main.cpp.s
 	$(MAKE) -f CMakeFiles\Test_QUEA.dir\build.make CMakeFiles/Test_QUEA.dir/tests/test_main.cpp.s
 	$(MAKE) -f CMakeFiles\Test_LDP.dir\build.make CMakeFiles/Test_LDP.dir/tests/test_main.cpp.s
+	$(MAKE) -f CMakeFiles\Test_DIR_GRAPH.dir\build.make CMakeFiles/Test_DIR_GRAPH.dir/tests/test_main.cpp.s
 	$(MAKE) -f CMakeFiles\Test_SET.dir\build.make CMakeFiles/Test_SET.dir/tests/test_main.cpp.s
+	$(MAKE) -f CMakeFiles\Test_MAP.dir\build.make CMakeFiles/Test_MAP.dir/tests/test_main.cpp.s
 .PHONY : tests/test_main.cpp.s
 
 # Help Target
@@ -645,14 +731,19 @@ help:
 	@echo ... Test_STKP
 	@echo ... Test_QUEA
 	@echo ... Test_LDP
+	@echo ... Test_DIR_GRAPH
 	@echo ... Test_SET
 	@echo ... edit_cache
+	@echo ... Test_MAP
 	@echo ... rebuild_cache
 	@echo ... gtest
 	@echo ... gtest_main
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... tests/test_DirectGraph.obj
+	@echo ... tests/test_DirectGraph.i
+	@echo ... tests/test_DirectGraph.s
 	@echo ... tests/test_ListArray.obj
 	@echo ... tests/test_ListArray.i
 	@echo ... tests/test_ListArray.s
@@ -668,6 +759,9 @@ help:
 	@echo ... tests/test_ListPointer.obj
 	@echo ... tests/test_ListPointer.i
 	@echo ... tests/test_ListPointer.s
+	@echo ... tests/test_Map.obj
+	@echo ... tests/test_Map.i
+	@echo ... tests/test_Map.s
 	@echo ... tests/test_QueueArray.obj
 	@echo ... tests/test_QueueArray.i
 	@echo ... tests/test_QueueArray.s
