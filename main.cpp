@@ -4,7 +4,7 @@
 
 
 
-enum class months{
+/*enum class months{
     january =1, february, march, april, may,june,july,august,september,october,november,december
 };
 
@@ -26,14 +26,14 @@ public:
 	operator ::(std::string name){
 
 	}
-};
+};*/
 
 
 
 int main(){
 
 
-	Dominio p2{1,2,3};
+//	Dominio p2{1,2,3};
 
 /*
     std::cout << (int) months::january << std::endl;

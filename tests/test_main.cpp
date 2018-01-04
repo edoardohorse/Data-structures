@@ -7,9 +7,6 @@
 
 #define DEBUG_
 
-#include "DirectGraph_for_test.h"
-using namespace NDirectGraphTest;
-
 
 
 int main(int argc, char* argv[]){
@@ -18,6 +15,6 @@ int main(int argc, char* argv[]){
 
 
 
-	system("pause");
+//	system("pause");
 	return 0;
 }

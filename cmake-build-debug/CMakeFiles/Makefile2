@@ -99,11 +99,11 @@ clean: CMakeFiles/Data_structures.dir/clean
 # Target rules for target CMakeFiles/Test_QUEP.dir
 
 # All Build rule for target.
-CMakeFiles/Test_QUEP.dir/all: lib/googletest/CMakeFiles/gtest.dir/all
 CMakeFiles/Test_QUEP.dir/all: lib/googletest/CMakeFiles/gtest_main.dir/all
+CMakeFiles/Test_QUEP.dir/all: lib/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles\Test_QUEP.dir\build.make CMakeFiles/Test_QUEP.dir/depend
 	$(MAKE) -f CMakeFiles\Test_QUEP.dir\build.make CMakeFiles/Test_QUEP.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\netwo\Documents\Asd\Data-structures\cmake-build-debug\CMakeFiles --progress-num=27,28,29 "Built target Test_QUEP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\netwo\Documents\Asd\Data-structures\cmake-build-debug\CMakeFiles --progress-num=30,31,32 "Built target Test_QUEP"
 .PHONY : CMakeFiles/Test_QUEP.dir/all
 
 # Include target in all.
@@ -137,11 +137,11 @@ clean: CMakeFiles/Test_QUEP.dir/clean
 # Target rules for target CMakeFiles/Test_LA.dir
 
 # All Build rule for target.
-CMakeFiles/Test_LA.dir/all: lib/googletest/CMakeFiles/gtest.dir/all
 CMakeFiles/Test_LA.dir/all: lib/googletest/CMakeFiles/gtest_main.dir/all
+CMakeFiles/Test_LA.dir/all: lib/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles\Test_LA.dir\build.make CMakeFiles/Test_LA.dir/depend
 	$(MAKE) -f CMakeFiles\Test_LA.dir\build.make CMakeFiles/Test_LA.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\netwo\Documents\Asd\Data-structures\cmake-build-debug\CMakeFiles --progress-num=6,7,8 "Built target Test_LA"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\netwo\Documents\Asd\Data-structures\cmake-build-debug\CMakeFiles --progress-num=9,10,11 "Built target Test_LA"
 .PHONY : CMakeFiles/Test_LA.dir/all
 
 # Include target in all.
@@ -175,11 +175,11 @@ clean: CMakeFiles/Test_LA.dir/clean
 # Target rules for target CMakeFiles/Test_STKA.dir
 
 # All Build rule for target.
-CMakeFiles/Test_STKA.dir/all: lib/googletest/CMakeFiles/gtest.dir/all
 CMakeFiles/Test_STKA.dir/all: lib/googletest/CMakeFiles/gtest_main.dir/all
+CMakeFiles/Test_STKA.dir/all: lib/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles\Test_STKA.dir\build.make CMakeFiles/Test_STKA.dir/depend
 	$(MAKE) -f CMakeFiles\Test_STKA.dir\build.make CMakeFiles/Test_STKA.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\netwo\Documents\Asd\Data-structures\cmake-build-debug\CMakeFiles --progress-num=33,34,35 "Built target Test_STKA"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\netwo\Documents\Asd\Data-structures\cmake-build-debug\CMakeFiles --progress-num=36,37,38 "Built target Test_STKA"
 .PHONY : CMakeFiles/Test_STKA.dir/all
 
 # Include target in all.
@@ -213,11 +213,11 @@ clean: CMakeFiles/Test_STKA.dir/clean
 # Target rules for target CMakeFiles/Test_LCU.dir
 
 # All Build rule for target.
-CMakeFiles/Test_LCU.dir/all: lib/googletest/CMakeFiles/gtest.dir/all
 CMakeFiles/Test_LCU.dir/all: lib/googletest/CMakeFiles/gtest_main.dir/all
+CMakeFiles/Test_LCU.dir/all: lib/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles\Test_LCU.dir\build.make CMakeFiles/Test_LCU.dir/depend
 	$(MAKE) -f CMakeFiles\Test_LCU.dir\build.make CMakeFiles/Test_LCU.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\netwo\Documents\Asd\Data-structures\cmake-build-debug\CMakeFiles --progress-num=12,13,14 "Built target Test_LCU"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\netwo\Documents\Asd\Data-structures\cmake-build-debug\CMakeFiles --progress-num=15,16,17 "Built target Test_LCU"
 .PHONY : CMakeFiles/Test_LCU.dir/all
 
 # Include target in all.
@@ -251,11 +251,11 @@ clean: CMakeFiles/Test_LCU.dir/clean
 # Target rules for target CMakeFiles/Test_LP.dir
 
 # All Build rule for target.
-CMakeFiles/Test_LP.dir/all: lib/googletest/CMakeFiles/gtest.dir/all
 CMakeFiles/Test_LP.dir/all: lib/googletest/CMakeFiles/gtest_main.dir/all
+CMakeFiles/Test_LP.dir/all: lib/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles\Test_LP.dir\build.make CMakeFiles/Test_LP.dir/depend
 	$(MAKE) -f CMakeFiles\Test_LP.dir\build.make CMakeFiles/Test_LP.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\netwo\Documents\Asd\Data-structures\cmake-build-debug\CMakeFiles --progress-num=18,19,20 "Built target Test_LP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\netwo\Documents\Asd\Data-structures\cmake-build-debug\CMakeFiles --progress-num=21,22,23 "Built target Test_LP"
 .PHONY : CMakeFiles/Test_LP.dir/all
 
 # Include target in all.
@@ -289,11 +289,11 @@ clean: CMakeFiles/Test_LP.dir/clean
 # Target rules for target CMakeFiles/Test_LCI.dir
 
 # All Build rule for target.
-CMakeFiles/Test_LCI.dir/all: lib/googletest/CMakeFiles/gtest.dir/all
 CMakeFiles/Test_LCI.dir/all: lib/googletest/CMakeFiles/gtest_main.dir/all
+CMakeFiles/Test_LCI.dir/all: lib/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles\Test_LCI.dir\build.make CMakeFiles/Test_LCI.dir/depend
 	$(MAKE) -f CMakeFiles\Test_LCI.dir\build.make CMakeFiles/Test_LCI.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\netwo\Documents\Asd\Data-structures\cmake-build-debug\CMakeFiles --progress-num=9,10,11 "Built target Test_LCI"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\netwo\Documents\Asd\Data-structures\cmake-build-debug\CMakeFiles --progress-num=12,13,14 "Built target Test_LCI"
 .PHONY : CMakeFiles/Test_LCI.dir/all
 
 # Include target in all.
@@ -327,11 +327,11 @@ clean: CMakeFiles/Test_LCI.dir/clean
 # Target rules for target CMakeFiles/Test_STKP.dir
 
 # All Build rule for target.
-CMakeFiles/Test_STKP.dir/all: lib/googletest/CMakeFiles/gtest.dir/all
 CMakeFiles/Test_STKP.dir/all: lib/googletest/CMakeFiles/gtest_main.dir/all
+CMakeFiles/Test_STKP.dir/all: lib/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles\Test_STKP.dir\build.make CMakeFiles/Test_STKP.dir/depend
 	$(MAKE) -f CMakeFiles\Test_STKP.dir\build.make CMakeFiles/Test_STKP.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\netwo\Documents\Asd\Data-structures\cmake-build-debug\CMakeFiles --progress-num=36,37,38 "Built target Test_STKP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\netwo\Documents\Asd\Data-structures\cmake-build-debug\CMakeFiles --progress-num=39,40,41 "Built target Test_STKP"
 .PHONY : CMakeFiles/Test_STKP.dir/all
 
 # Include target in all.
@@ -365,11 +365,11 @@ clean: CMakeFiles/Test_STKP.dir/clean
 # Target rules for target CMakeFiles/Test_QUEA.dir
 
 # All Build rule for target.
-CMakeFiles/Test_QUEA.dir/all: lib/googletest/CMakeFiles/gtest.dir/all
 CMakeFiles/Test_QUEA.dir/all: lib/googletest/CMakeFiles/gtest_main.dir/all
+CMakeFiles/Test_QUEA.dir/all: lib/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles\Test_QUEA.dir\build.make CMakeFiles/Test_QUEA.dir/depend
 	$(MAKE) -f CMakeFiles\Test_QUEA.dir\build.make CMakeFiles/Test_QUEA.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\netwo\Documents\Asd\Data-structures\cmake-build-debug\CMakeFiles --progress-num=24,25,26 "Built target Test_QUEA"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\netwo\Documents\Asd\Data-structures\cmake-build-debug\CMakeFiles --progress-num=27,28,29 "Built target Test_QUEA"
 .PHONY : CMakeFiles/Test_QUEA.dir/all
 
 # Include target in all.
@@ -403,11 +403,11 @@ clean: CMakeFiles/Test_QUEA.dir/clean
 # Target rules for target CMakeFiles/Test_LDP.dir
 
 # All Build rule for target.
-CMakeFiles/Test_LDP.dir/all: lib/googletest/CMakeFiles/gtest.dir/all
 CMakeFiles/Test_LDP.dir/all: lib/googletest/CMakeFiles/gtest_main.dir/all
+CMakeFiles/Test_LDP.dir/all: lib/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles\Test_LDP.dir\build.make CMakeFiles/Test_LDP.dir/depend
 	$(MAKE) -f CMakeFiles\Test_LDP.dir\build.make CMakeFiles/Test_LDP.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\netwo\Documents\Asd\Data-structures\cmake-build-debug\CMakeFiles --progress-num=15,16,17 "Built target Test_LDP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\netwo\Documents\Asd\Data-structures\cmake-build-debug\CMakeFiles --progress-num=18,19,20 "Built target Test_LDP"
 .PHONY : CMakeFiles/Test_LDP.dir/all
 
 # Include target in all.
@@ -441,8 +441,8 @@ clean: CMakeFiles/Test_LDP.dir/clean
 # Target rules for target CMakeFiles/Test_DIR_GRAPH.dir
 
 # All Build rule for target.
-CMakeFiles/Test_DIR_GRAPH.dir/all: lib/googletest/CMakeFiles/gtest.dir/all
 CMakeFiles/Test_DIR_GRAPH.dir/all: lib/googletest/CMakeFiles/gtest_main.dir/all
+CMakeFiles/Test_DIR_GRAPH.dir/all: lib/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles\Test_DIR_GRAPH.dir\build.make CMakeFiles/Test_DIR_GRAPH.dir/depend
 	$(MAKE) -f CMakeFiles\Test_DIR_GRAPH.dir\build.make CMakeFiles/Test_DIR_GRAPH.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\netwo\Documents\Asd\Data-structures\cmake-build-debug\CMakeFiles --progress-num=3,4,5 "Built target Test_DIR_GRAPH"
@@ -479,11 +479,11 @@ clean: CMakeFiles/Test_DIR_GRAPH.dir/clean
 # Target rules for target CMakeFiles/Test_SET.dir
 
 # All Build rule for target.
-CMakeFiles/Test_SET.dir/all: lib/googletest/CMakeFiles/gtest.dir/all
 CMakeFiles/Test_SET.dir/all: lib/googletest/CMakeFiles/gtest_main.dir/all
+CMakeFiles/Test_SET.dir/all: lib/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles\Test_SET.dir\build.make CMakeFiles/Test_SET.dir/depend
 	$(MAKE) -f CMakeFiles\Test_SET.dir\build.make CMakeFiles/Test_SET.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\netwo\Documents\Asd\Data-structures\cmake-build-debug\CMakeFiles --progress-num=30,31,32 "Built target Test_SET"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\netwo\Documents\Asd\Data-structures\cmake-build-debug\CMakeFiles --progress-num=33,34,35 "Built target Test_SET"
 .PHONY : CMakeFiles/Test_SET.dir/all
 
 # Include target in all.
@@ -517,11 +517,11 @@ clean: CMakeFiles/Test_SET.dir/clean
 # Target rules for target CMakeFiles/Test_MAP.dir
 
 # All Build rule for target.
-CMakeFiles/Test_MAP.dir/all: lib/googletest/CMakeFiles/gtest.dir/all
 CMakeFiles/Test_MAP.dir/all: lib/googletest/CMakeFiles/gtest_main.dir/all
+CMakeFiles/Test_MAP.dir/all: lib/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles\Test_MAP.dir\build.make CMakeFiles/Test_MAP.dir/depend
 	$(MAKE) -f CMakeFiles\Test_MAP.dir\build.make CMakeFiles/Test_MAP.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\netwo\Documents\Asd\Data-structures\cmake-build-debug\CMakeFiles --progress-num=21,22,23 "Built target Test_MAP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\netwo\Documents\Asd\Data-structures\cmake-build-debug\CMakeFiles --progress-num=24,25,26 "Built target Test_MAP"
 .PHONY : CMakeFiles/Test_MAP.dir/all
 
 # Include target in all.
@@ -552,6 +552,44 @@ clean: CMakeFiles/Test_MAP.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/Test_IND_GRAPH.dir
+
+# All Build rule for target.
+CMakeFiles/Test_IND_GRAPH.dir/all: lib/googletest/CMakeFiles/gtest_main.dir/all
+CMakeFiles/Test_IND_GRAPH.dir/all: lib/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) -f CMakeFiles\Test_IND_GRAPH.dir\build.make CMakeFiles/Test_IND_GRAPH.dir/depend
+	$(MAKE) -f CMakeFiles\Test_IND_GRAPH.dir\build.make CMakeFiles/Test_IND_GRAPH.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\netwo\Documents\Asd\Data-structures\cmake-build-debug\CMakeFiles --progress-num=6,7,8 "Built target Test_IND_GRAPH"
+.PHONY : CMakeFiles/Test_IND_GRAPH.dir/all
+
+# Include target in all.
+all: CMakeFiles/Test_IND_GRAPH.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Test_IND_GRAPH.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\netwo\Documents\Asd\Data-structures\cmake-build-debug\CMakeFiles 7
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/Test_IND_GRAPH.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\netwo\Documents\Asd\Data-structures\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/Test_IND_GRAPH.dir/rule
+
+# Convenience name for target.
+Test_IND_GRAPH: CMakeFiles/Test_IND_GRAPH.dir/rule
+
+.PHONY : Test_IND_GRAPH
+
+# clean rule for target.
+CMakeFiles/Test_IND_GRAPH.dir/clean:
+	$(MAKE) -f CMakeFiles\Test_IND_GRAPH.dir\build.make CMakeFiles/Test_IND_GRAPH.dir/clean
+.PHONY : CMakeFiles/Test_IND_GRAPH.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/Test_IND_GRAPH.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Directory level rules for directory lib/googletest
 
 # Convenience name for "all" pass in the directory.
@@ -578,7 +616,7 @@ lib/googletest/preinstall:
 lib/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f lib\googletest\CMakeFiles\gtest.dir\build.make lib/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f lib\googletest\CMakeFiles\gtest.dir\build.make lib/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\netwo\Documents\Asd\Data-structures\cmake-build-debug\CMakeFiles --progress-num=39,40 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\netwo\Documents\Asd\Data-structures\cmake-build-debug\CMakeFiles --progress-num=42,43 "Built target gtest"
 .PHONY : lib/googletest/CMakeFiles/gtest.dir/all
 
 # Include target in all.
@@ -615,7 +653,7 @@ clean: lib/googletest/CMakeFiles/gtest.dir/clean
 lib/googletest/CMakeFiles/gtest_main.dir/all: lib/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f lib\googletest\CMakeFiles\gtest_main.dir\build.make lib/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f lib\googletest\CMakeFiles\gtest_main.dir\build.make lib/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\netwo\Documents\Asd\Data-structures\cmake-build-debug\CMakeFiles --progress-num=41,42 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\netwo\Documents\Asd\Data-structures\cmake-build-debug\CMakeFiles --progress-num=44,45 "Built target gtest_main"
 .PHONY : lib/googletest/CMakeFiles/gtest_main.dir/all
 
 # Include target in all.
